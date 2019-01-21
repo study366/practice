@@ -4,48 +4,6 @@
 	<title>九宫格</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="xzrw1-1.css" type="text/css" />
-	<style>
-		*{
-	margin: 0;
-	padding: 0;
-}
-a:link{
-	text-decoration: none;
-	color: black;
-}
-.main{
-	overflow: hidden;
-	text-align: center;
-	margin: 0 auto;
-	/*加上绝对定位就不能依靠margin居中了*/
-	/*position: absolute;*/
-}
-.nav{
-	width: 100%;
-	height: 33%;
-	overflow: hidden;
-}
-.nav .box{
-	/*background-color: pink;*/
-	/*设置盒子宽高包括border；*/
-	box-sizing: border-box;
-	width: 33%;
-	height: 100%;
-	/*border: 1px solid blue;*/
-	float: left;
-}
-.box div{
-	background-color: orange;
-	width: 90%;
-	height: 90%;
-	margin: 5%; 
-	border-radius: 10%;
-	align:center;
-	line-height:90%;
-	
-} 
-	</style>
-
 </head>
 <body>
 	<!-- 大盒子以取得高度 -->
@@ -53,72 +11,41 @@ a:link{
 		<!-- 第一行 -->
 		<div class="nav">
 			<div class="box">
-				<div>我</div>
+				<div></div>
 			</div>
 			<div class="box">
-				<div>爱</div>
+				<div></div>
 			</div>
 			<div class="box">
-				<div>你</div>
+				<div></div>
 			</div>
 		</div>
 		<!-- 第二行 -->
 		<div class="nav">
 			<div class="box">
-				<div>我</div>
+				<div></div>
 			</div>
 			<div class="box">
-				<div>的</div>
+				<div></div>
 			</div>
 			<div class="box">
-				<div>猜</div>
+				<div></div>
 			</div>
 		</div>
 		<!-- 第三行 -->
 		<div class="nav">
 			<div class="box">
-				<div>第一个</div>
+				<div></div>
 			</div>
 			<div class="box">
 				<div>github</div>
 			</div>
 			<div class="box">
-				<div>代码</div>
+				<div></div>
 			</div>
 		</div>
 	</div>
 	<script  src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-
-	
 	<script type="text/javascript" src="xzrw1-1.js"></script>
-	<script>
-	// 总结：问题一 
-// 	无法动态变幻大小，
-// 	经检查，宽高wid hei定义成全局函数，由于函数内部没包含宽高，每次函数调用也不会重新计算、
-// 版本一，仅根据高度变化而变幻、
-// 设置宽高给main
-function setMainWidthHeight () {
-	// 取得可见区域宽高
-	var wid = document.documentElement.clientWidth; 
-	var hei = document.documentElement.clientHeight; 
-	hei>wid?hei=wid:hei=hei;
-	$('.main').height(function () {
-		return hei;
-});
-	console.log('高度设置成功%o',hei);
-	$('.main').width(function () {
-		return hei;
-});
-	console.log('宽度设置成功为%o',hei);
-
-}
-// 调用函数；
-setMainWidthHeight();
-// window.onmouseover=function() {
-// 	setMainWidthHeight();
-// } 
-window.onresize=function(){
-	setMainWidthHeight();}
-</script>
 </body>
 </html>
