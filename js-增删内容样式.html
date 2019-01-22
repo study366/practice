@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> innerHTML </title>
+</head>
+<body>
+    <div>前端技术</div>
+	<div>IOS技术</div>
+	<div>安卓技术</div>
+	<div>JAVA技术</div>
+	<script>
+		//补充代码
+		var list=document.getElementsByTagName("div");
+		for(i=0;i<list.length;i++){
+			list[i].innerHTML="来慕课网学习最新的"+list[i].innerHTML;//会影响原来的
+		}
+    </script>
+</body>
+</html>

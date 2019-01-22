@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>习题</title>
+    <style>
+        .cards div {
+            float: left;
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            color: #fff;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+            text-indent: -9999px;
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<h1>添加事件处理</h1>
+
+<div class="cards">
+    <div>43</div>
+    <div>21</div>
+    <div>56</div>
+    <div>16</div>
+    <div>89</div>
+    <div>94</div>
+    <div>46</div>
+    <div>26</div>
+    <div>67</div>
+    <div>90</div>
+    <div>25</div>
+    <div>10</div>
+    <div>84</div>
+    <div>76</div>
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(function () {
+
+        //此处写代码 text-indent 文本缩进
+        $('.cards').on('click',function (event) {
+            // var event = event || widows.event;
+            $(event.target).css({'color':'black',
+                                'backgroundColor':'pink',
+                                'text-indent': '0px',     
+        });
+        })
+
+    });
+</script>
+</body>
+</html>

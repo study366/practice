@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="one">第2个页面</div>
+	<div id="two">跳转到第三个页面</div>
+	<div id="three">后退</div>
+	<script type="text/javascript">
+		var a=document.getElementById("one");
+		var b=document.getElementById("two");
+		var c=document.getElementById("three");
+		b.onclick=function () {
+			/* body... */
+			location.href=("history3.html");
+		}
+		c.onclick=function () {
+			/* body... */
+			history.back();
+		}
+		
+	</script>
+</body>
+</html>

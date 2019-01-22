@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>onload</title>
+    <script type="text/javascript">
+    	//补充代码
+    	window.onload=function(){
+    		var list=document.getElementById("input");
+    		list.onclick=function  () {
+    			// body... 
+    			list.style.color = "red";
+    		}
+    		list.onmousemove=function(){
+    			list.style.color = "gray";
+    		}
+    	}
+    </script>
+</head>
+<body>
+		<input  id="input" type="button" value="点击改变按钮字体颜色" >
+</body>
+</html>

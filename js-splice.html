@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js-splice</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		var input=0,arr=[];
+		while(input!="-1"){
+			input=Number(prompt("请输入任意字符，以“-1”结束"));
+			arr.push(input);
+		}
+		arr.pop();
+		arr.splice(0,2,"hello");
+		document.write(arr);
+
+	</script>
+</body>
+</html>

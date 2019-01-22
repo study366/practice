@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>position-test</title>
+	<style type="text/css">
+		.nav{width: 8000px;
+			height: 1600px;
+			background-color: red;
+			position: absolute;
+			top: 0px;
+			text-align: center;
+			display: table;
+		}
+		.ad:nth-child(1){
+			width: 80px;
+			height: 160px;
+			position:fixed;
+			top: 50%;
+			margin-top:-80px;
+			left: 0px;  
+			background-color: blue;
+		}
+		.ad:nth-child(2){
+			width: 80px;
+			height: 160px;
+			position: fixed;
+			top: 50%;
+			margin-top: -80px;
+			right: 0px;
+			background-color: blue;
+			display: table-cell;
+			vertical-align: middle;
+		}
+	</style>
+</head>
+<body>
+	<div class="nav">
+		我是背景
+		<div class="ad">我是左边广告</div>
+		<div class="ad">我是右边广告</div>
+	</div>
+</body>
+</html>

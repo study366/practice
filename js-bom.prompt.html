@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+	    <meta charset="UTF-8">
+	    <title>输入框</title>
+	</head>
+	<body>
+		<input type="button" value="点击" id="button">
+		<input type="button" value="删除" id="button2">
+		<script type="text/javascript">
+			//补充代码
+			var a=document.getElementById("button");//为什么a是空的呢
+				a.onclick=function() {
+				// body... 
+				this.value="改变按钮文字";
+				var remember=prompt("请输入文本\n当点击确定时，信息将被保存");
+			}
+			a.onmouseout=function() {
+				// body... 
+				this.value="点击";
+			}
+			var b=document.getElementById("button2");
+			b.onclick=function() {
+				// body... 
+				if(window.confirm("确认删除吗")){
+					b.style.display = "none";
+				}
+
+			}
+		</script>
+	</body>
+</html>

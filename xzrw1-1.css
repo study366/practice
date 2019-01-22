@@ -1,0 +1,38 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a:link{
+	text-decoration: none;
+	color: black;
+}
+.main{
+	overflow: hidden;
+	text-align: center;
+	margin: 0 auto;
+	/*加上绝对定位就不能依靠margin居中了*/
+	/*position: absolute;*/
+}
+.nav{
+	width: 100%;
+	height: 33%;
+	overflow: hidden;
+}
+.nav .box{
+	/*background-color: pink;*/
+	/*设置盒子宽高包括border；*/
+	box-sizing: border-box;
+	width: 33%;
+	height: 100%;
+	/*border: 1px solid blue;*/
+	float: left;
+}
+.box div{
+	background-color: orange;
+	width: 90%;
+	height: 90%;
+	margin: 5%; 
+	border-radius: 10%;
+	display：flex;
+	justify-content: center; align-items: center;
+} 

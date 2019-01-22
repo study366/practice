@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>闪烁的文字</title>
+        <style type="text/css">
+            div{
+                width:200px;
+                height:200px;
+                line-height:200px;
+                border:2px solid gray;
+                text-align:center;
+                color:red;
+            }
+            #text2{
+                width:200px;
+                height:400px;
+                line-height:20px;
+                border:2px solid gray;
+                text-align:center;
+                color:red;
+            }
+        </style>
+    </head>
+<body>
+    <h3>会闪烁的文字</h3>
+        <div id="text"> </div>
+        <div id="text2" ></div>
+        <script type="text/javascript">
+            //补充代码
+            var a=document.getElementById("text");
+            var i=0;
+            setInterval(function () {
+                if (i) {
+                    i=0;
+                    a.innerHTML="☆☆☆今日特卖☆☆☆ ";
+                }
+                else{
+                  i=1;
+                a.innerHTML="★★★今日特卖★★★ "; 
+                }
+                /* body... */
+            },500)
+            var c=document.getElementById("text2");
+            setInterval(function () {
+                /* body... */
+                c.innerHTML=c.innerHTML+"hello ";              
+            },500)
+        </script>
+    </body>
+</html>

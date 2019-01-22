@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+    .box {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        border: 5px solid red;
+    }
+    .bg1 {
+        background-color: green;
+    }
+    .border {
+        border: 5px solid yellow;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="box" id="box"></div>
+    <button class="btn" id="btn">切换背景和边框颜色</button>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    // $('.box').addClass('box1 bg1 border');
+    // $('.btn').addClass('box1 bg1 border');
+    var  a= $('#btn');
+    console.log(a);
+    // 无法用onclick绑定事件
+    a.on({click:function(){
+        console.log('something happen');
+        $('.box').toggleClass('box1 bg1 border');
+    }})
+</script>
+</html>

@@ -1,0 +1,19 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.wrap{
+	width: 30em;
+	height: 30em;
+	background-color: #d4d0cf;
+	/*position: absolute;*/
+	margin: 0 auto;
+	font-size: 1em;
+	line-height: 2.5em;
+}
+table{
+	padding:1px 100px; 
+}
+.odd{
+	text-align: right;
+}

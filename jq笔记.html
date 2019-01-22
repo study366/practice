@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jq笔记</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- 第一部分，初识jquery -->
+	<div>
+		<!-- 第一节，jq是什么，作用 -->
+		<div>
+			<h5>	jq是js库</h5>
+			<p>处理html、事件、动画</p>
+			<pre>
+			 优势：兼容性好
+			</pre>
+		</div>
+		<!-- 第二节 -->
+		<div>
+			<h5>CDN</h5>
+			<p>可以使用cdn而不下载</p>
+			<p>
+				引用方法：script src="//+网址"
+			</p>
+		</div>
+		<!-- 第三节 基本概念 -->
+		<div>
+			<h5>jq理念</h5>
+			<p>write less do more </p>
+			<p>结构html表现css行为js 分离</p>
+			<p>
+				window.jquery===window.$
+			</p>
+			<p>$.each表示使用jq方法</p>
+			<p>$('#mydiv')使用jq选择器</p>
+			<p>$(domObject)使用jq</p>
+			<h5>jq对象和dom对象转换</h5>
+			<p>#(xxx）.get(0)-->dom object</p>
+			<p>#(xxx）[0]-->dom object</p>
+		</div>
+		<!-- 第三节第二部分链式语法 -->
+		<div>
+			<h5>
+				链式语法
+			</h5>
+			<pre>
+				$('#divTest')
+				.text('hello word')
+				.removeClass('blue')
+				.css('color','red')
+				因为jq方法结束会返回jq对象、、此即链式语法秘密
+				要注意某些有破坏性的方法要用end（);才可以继续链式。
+				
+				判断页面加载完毕？
+				window onload：加载完，图片动画什么的都要
+				$.ready:dom加载完，图片动画什么的先不管了
+				注意：read与load不要一起用		
+			</pre>
+		</div>
+		<!-- 第四节，选择的艺术 -->
+		<div>
+			<h5>选择</h5>
+			<pre>
+				选择
+				如何选择呢?
+				$("#id")
+				$(".class")
+				$("[attribute=value]")
+				$("elements")
+				...
+				操作
+			</pre>
+		</div>
+		<!-- 第四节，基本选择器 -->
+		<div>
+			<h5>基本选择器</h5>
+			<pre>
+				ID  选择器
+				类  选择器
+				元素  选择器
+				后代  选择器
+				属性  选择器
+			</pre>
+		</div>
+		<!-- 第四节，位子筛选择器 -->
+		<div>
+			<h5>位置筛选器jq独有</h5>
+			<pre>
+				：first
+				：last
+				：even 偶数位
+				：odd 	奇数位
+				：eq(n) 等于第n个位置
+				 :gt(n) 大于第n个位置
+				 :lt(n) 小于
+			</pre>
+			<h5>子元素筛选器jq独有</h5>
+			<pre>
+				：first-child
+				：last-child
+				:first-of-type 第一个类型同
+				:last-of-type
+				:nth-child(n) 选择第n个从1开始 2n 偶数个，3n 3的倍数个
+				:nth-last-child()
+				:nth-of-type()
+				:nth-last-of-type()
+				:only-child
+				:only-of-type
+			</pre>
+			<h5>表单筛选器jq独有</h5>
+			<pre>
+				：checked 选择被选中的
+				:disable 禁用
+				:enable	激活
+				:focus 选择焦点所在
+
+				:button button以及type=button
+				:checkbox
+				:file 文件输入框
+				:image 
+				:input
+				:password
+				:radio 单选框
+				:reset	
+				:selected 被选中的
+				:submit 
+				:text 
+			</pre>
+			<h5>内容筛选器jq独有</h5>
+			<pre>
+				：empty 选择没有文本内容的以及input
+				：contain(text) 实例$('p:contains("lorem")')选择包含lorem的p元素
+				:has(selector) 例$('p:has(span)') 选择包含p内的span
+				:parent 选择有内容的
+			</pre>
+			<h5>其他筛选器jq独有</h5>
+			<pre>
+				：lang(language) 筛选语言
+				:not(selector) 所有不是**的
+				:root	选择根元素
+				:target	
+				:hidden 选择不可见元素display;none 或者type=hidden
+				:visible 选择所有可见的
+				:header	选择标题
+				:animated 选择正在执行动画的元素
+			</pre>
+		</div>
+		<!-- jquery DOM操作 -->
+		<div> 
+			<h5>方法</h5>
+			$('#info').parents('div'):查找所有父元素div
+			$('#info').children():查找子元素
+			$('#info').contents():查找内容
+		</div>
+		<div> 
+			<h5>其他方法</h5>
+			.is(selector) 判断里面是否有 **
+			.end() 返回破坏性操作之前的状态
+			.addback() 	把破坏性操作之前的元素也包含进来。
+						如果破坏性操作之前的叫做本金，操作			之后叫做利息，这就是本金利息一起拿
+		</div>
+		<div>
+			<h4>元素特性属性值获取</h4>
+			<div>
+				<pre>
+					特性 attributes getattribute(**) 值 string  一个人区别于其他人的属性
+					属性 properties  .**   值string boolean number object 人的所有属性
+				</pre>
+
+			</div>
+			<h4>元素特性操作/h4>
+			<div>
+				<pre>attr
+					获取 attr（name）获取第一个元素 、
+
+					示例 $('img').attr('title') 第一个img的名称
+				设置	 attr(name,value) 设置第一个元素 
+
+					示例 $('img').attr('title'，'name') 设置第一个img的名称
+						$('img').attr({title:'name',
+										alt: 'alt',
+										class: 'class'
+						})
+					移除属性$('img').removeattr('title  alt class')  移除title
+					注意：无论设置boolean 还是number 最终都会转换为string
+				</pre>
+				<h5>属性操作</h5>
+				<pre> prop
+					prop(name) 获取
+					prop(name,value) 设置
+					removeProp 删除   一次只能删除一个
+					
+				</pre>
+			</div>
+		</div> 
+		<div>
+			<h5>数据操作</h5>
+			<pre>date
+				date(name) 获取
+				date(name,value) 设置
+				removeDate 删除   一次能删除多个
+				只能删除date()的内容，不能删除html内容
+				jquery.hasDate(element) 判断是否有对象
+			</pre>
+		</div>
+		<div>
+			<h5>修改元素样式</h5>
+			<pre>
+				//className
+				//attr()
+				addClass(names) 增加一个或多个 空格分隔
+				removeClass(names) 移除类
+				hasClass(names) 是否有某类
+				toggleClass(names][switch])切换类，有则删除没有就加、
+									 switch可以添加符合某种条件则切换 
+				注意：本次练习的似乎绑定事件用onclick失败，
+				最终发现使用.on({click:function(){
+				toggleClass(name)可实现。
+			}})
+			</pre>
+			<h5>获取或者设置Style</h5>
+			<pre>
+				css(name,value) 单一属性 不加{}且用,隔开
+				示例
+				element.css({
+				'background-color':'red',  注意此处,因为这里有连字符 
+											//或者驼峰写法//ok？  
+				height:200,
+				border:'10px solid #000'  注意此处，属性是多个值加引号空格隔开
+				marginTop:100
+				width:'+=50'  表示减去50 这里也可以用函数来设置
+				element.css('heigth',function(index,value){
+				console.log(value)
+				return parseInt(value,10)+50;
+			})
+			})
+			</pre>
+			<h5>获取或者设置尺寸</h5>
+			<pre>
+				width(value)
+				height(value)
+				innerHeight(value)  包含内边距
+				innerWidth(value)
+				outerWidth(value) 包含内边距和边框，外边距不确定
+				outerHeight(value)
+			</pre>
+			<h5>获取或者设置位置或滚动</h5>
+			<pre>
+				offset(coordinates) 第一个元素相对于文档偏移位置 返回两个值 左上距离 
+				设置示例： .offset({top:100,left:50});
+				position()相对于 父元素的距离忽略外边距//，没明白
+				scrollLeft(value)
+				scrollTop(value) 默认滚动条相对于元素顶部的偏移
+			</pre>
+			<h5>获取或者设置元素内容
+			</h5>
+			<pre>
+				html() 获取设置html， 获取时只取一个  可以设置 >div>
+				text() 文本 里面所有内容都当做文本
+			</pre>
+		
+		</div>
+		<div>
+			<h5>移动或插入元素</h5>
+			<pre>
+				append(content[,content,...content]) 内部最后
+				prepend(content[,content,...content])  内部最前
+				befor() 之前
+				after() 之后
+				示例：
+					var ele =$('li');
+					ele.after('>a> href="#">阅读更多>/a>')
+					//移动
+					ele.append($('h2'))  把h2移动到ele之后
+					//插入一堆
+					ele.append('>p> >/p>','asfa',['', '',''])
+				appendTo(tatget) 内部最后
+				prependTo(tatget)  内部最前
+				insertBefor(tatget) 之前
+				insertAfter(tatget) 之后
+				示例：
+					$('h2').appendTo(ele);
+			</pre>
+			<h5>包裹元素</h5>
+			<pre>
+				wrap(wrapper):  给他们每个元素分别添加个父元素（多父）
+					示例:  var element = $('a');
+								element.wrap('< p> < /p>');
+				wrapAll(wrapper):  给他们一起添加个父元素（一父）
+								var element = $('a');
+								element.wrapAll('< p> < /p>');
+				wrapInner(wrapper):  把元素内容包裹；就是在ele内部加标签
+				unwrap():  解除包裹                                 
+			</pre>
+			<h5>移除元素</h5>
+			<pre>
+				remove()
+				detach()     不删除事件
+				empty()  	清除内容                          
+			</pre>
+			<h5>复制和替换元素</h5>
+			<pre>
+				clone() 两个参数一个是是否复制事件处理函数和数据，一个是是否执行深度复制
+				replaceWith(content)
+				replaceAll(target)                          
+			</pre>
+			<h5>处理表单元素值</h5>
+			<pre>
+				val() 
+				示例：
+				$('[name="text"]').val();  内容
+				$('[name="radio"]:checked').val(); 单选 
+				$('[name="multiSelect"]').val();  复选
+				$('[name="checkbox"]:checked').mao(function(){
+						return $(this).val()
+					}).toArray
+					             
+			</pre>
+		</div>
+	</div>
+	<div>
+		<div>
+			<h4>DOM事件模型</h4>
+			<div>
+				<h5>0级事件</h5>
+				<pre>
+					例：
+					onclick="doSomething"
+					input.onclick=function(){...}
+
+					获取/事件/参数 
+					event = event ||window.event
+					var target = event.target||event.srcElement
+				注意：事件模型会有事件冒泡--即点击子元素事件，会触发父元素事件
+					使用.stopPropagation();
+						.cancelBubble=ture	;
+					可以不冒泡 
+					DOM只能有一个事件
+				</pre>
+				<h5>2级事件</h5>
+				<pre>
+					addEventListener(eventType(事件类型),listener（要做的事）,useCapture(是否捕获))
+					捕获：相对于冒泡   冒泡从子到父依次触发 ，捕获由父到子依次触发
+					attachEvent(eventName,handle)
+				</pre>
+			</div>
+			<h4>jq事件模型</h4>
+			<div>
+				<h5>添加事件处理</h5>
+				<pre>
+					on(eventType[,selecetor][,data],handler)
+						事件名称  选择器      数据	事件处理函数	
+					事件委托：可以把事件绑定在父元素上面 		
+					
+					例如给ul添加函数
+						$('ul').on('click',function(event){
+						console.log('%O clicked',$(event.target));
+					});
+					备注：%o为转义字符，会用逗号后元素替换掉
+
+					阻止冒泡： stopPropagation()
+					阻止默认行为： preventDefault()
+					阻止冒泡和默认行为： return false
+
+					所有支持事件
+					blur
+					change 
+
+					click
+					dbclick 双击
+					error
+
+					focus
+					focusin
+					focusout
+		
+					keydown
+					keypress
+					keyup
+
+					load 
+					onload
+
+					mousedown
+					mouseenter
+					mouseleave
+					mousemove
+					mouseout
+					mouseover
+					mouseup
+
+					ready
+					resize 改变尺寸
+					scroll 滚动条
+					select 选择
+					submit
+
+					<h5>一次性事件处理</h5>
+					one(eventType[,selector][,data],handler)
+					执行完就销毁
+					<h5>移除事件处理</h5>
+					off(eventType[,selector][,data],handler)
+					<h5>事件实例对象</h5>
+					<h5>事件实例对象的方法</h5>
+					preventDefault() 阻止默认行为
+					stopPropagation()  阻止冒泡行为
+					stopImmediatePropagation()  立即阻止冒泡行为以及后续绑定的事件
+					
+					是否调用前面对应的方法 返回布尔值
+					isDefaultPrevented()
+					isPropagationStopped()
+					isImmediatePropagationStopped()
+				</pre>
+				<h5>触发事件</h5>
+				trigger  （'click',[1,2]）
+				triggerHandle
+
+				triggerHandle相对于trigger
+					不会触发浏览器默认事件
+					不会产生事件冒泡
+					只会触发jq对象集合的第一个元素事件
+					返回处理函数返回值
+				<h5>快捷方法</h5>
+				blur     change 
+				click      dbclick 
+
+				focus focusin focusout
+				
+				keydown		keypress	keyup
+
+				鼠标事件
+				mousedown	mouseup
+
+				mouseenter								
+				mouseleave	
+
+				mousemove							
+				<h5>hover</h5>
+					 hover
+				<h5>自定义事件</h5>
+				<h5>事件命名空间</h5>
+				示例：
+				$('li:odd').on('click.even',function(e){
+				console.log('%o偶数'，$(this))
+			})
+			</div>
+				<h5>如何使用插件</h5>
+				 <pre>
+				 	引入插件： 需要在jquery之后
+					script src="../../****">/script>
+					查看并实现示例代码
+					阅读文档	
+				 </pre>
+				 <h5>实用插件介绍</h5>
+				 chosen	
+				 pickadate
+				 magnific-popup不求上进的玉子	
+		</div>
+	</div>
+</body>
+</html>

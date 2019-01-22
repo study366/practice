@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>没得标题</title>
+	<meta charset="utf-8">
+	<style type="text/css"></style>
+</head>
+<body>
+	<input id="input" type="button" name="没得名字" value="全选">
+	<script type="text/javascript">
+		var a=document.getElementById("input");
+		a.onclick =function() {
+			// body...
+			if(this.value=="全选"){
+				this.value="反选";
+			}
+			else {
+			 	this.value="全选";
+			 } 
+		}
+		// input.onclick=fn;
+	</script>
+</body>
+</html>

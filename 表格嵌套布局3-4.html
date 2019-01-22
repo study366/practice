@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+	<title></title>	
+	<style type="text/css">
+	table {
+		background-color: #f2f2f2;
+		width: 600px;
+	}
+		td{
+			height: 25px;
+			width: 150px;
+		}
+	</style>
+</head>
+<body>
+	<h4 align="center">注册信息</h4>
+	<hr color=#336699>
+	<!-- 表单form标签 
+		action="url" 
+		method="get/post"发送方式
+	 	name="form_name" 
+	 	target="_blank/_self/_parent/_top" 
+	 	enctype -->
+	<form action="">
+	<table align="center" >
+		<tr align="left">
+			<td>用户名：</td>
+			<td><input type="text" name="user" value="请输入用户名" size="20"></td>
+		</tr>
+		<tr align="left">
+			<td>密码</td>
+			<td><input type="password" name="user" value="请输入密码"></td>
+		</tr>
+		<tr align="left">
+			<td>确认密码</td>
+			<td><input type="password" name="user" value="请再输入密码"></td>
+		</tr>
+		<tr align="left">
+			<td>上传照片</td>
+			<td><input type="file" name="user" value="选择文件"></td>
+		</tr>
+		<tr>
+			<td>性别</td>
+			<td><input type="radio" name="sex" value="0"><span>男</span><input type="radio" name="sex" value="1"><span>女</span></td>
+		</tr>
+		<tr>
+			<td>爱好</td>
+			<td>
+				<input type="checkbox" name="fav" value="1"><span>篮球</span>
+				<input type="checkbox" name="fav" value="1"><span>足球</span>
+				<input type="checkbox" name="fav" value="1"><span>排球</span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button"  value="点我">
+				<input type="submit"  value="提交">
+				<input type="reset"  value="重置">
+			</td>
+			<td>
+				<input type="reset"  value="快点我吧">
+			</td>
+		</tr>
+	</table>
+	<!-- 下拉菜单 默认选狗-->
+	<select name="动物">
+		<option value="pa">熊猫</option>
+		<option value="ca">猫</option>
+		<option value="do" selected>狗</option>
+		<option value="pi">猪</option>
+		<option value="mo">猴子</option>
+	</select>
+	<!-- 列表项，显示四个可选两个 -->
+	<select size="4" multiple="2" >
+		<option >苹果</option>
+		<option>香蕉</option>
+		<option>橙子</option>
+		<option selected>桃</option>
+		<option>梨</option>
+	</select>
+	<!-- 分组标签 -->
+	<select>
+			<option>请选择：</option>
+		<optgroup label="水果">
+			<option value="pa">苹果</option>
+			<option value="ca">猕猴桃</option>
+			<option value="mo">杏子</option>
+		</optgroup>
+		<optgroup label="蔬菜">
+			<option >西红柿</option>
+			<option>白菜</option>
+			<option selected>油麦</option>
+		</optgroup>
+	</select>
+	<textarea name="one" rows="5" cols="20" placeholder="请输入个人介绍"></textarea>
+	</form>	
+</body>
+</html>

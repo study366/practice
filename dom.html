@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DOM的查找方法</title>
+</head>
+<body>
+    <div id="one">第一个元素</div>
+	<div id="two">第二个元素</div>
+	<div id="three">第三个元素</div>
+<script>
+	//补充代码
+	// document.getElementById("one");
+	var box=document.getElementById("one");//获取id为one的元素；
+	console.log(box);//console.log表示在控制台输出box；
+	alert(box.innerHTML);//.innerHTML表示显示html内容 alert 弹出窗口；
+	alert(document.getElementById("two").innerHTML);
+	// document.write(document.getElementById("three"));
+	console.log(document.getElementById("two").innerHTML);
+	console.log(document.getElementById("three").innerHTML);
+</script>
+</body>
+</html>

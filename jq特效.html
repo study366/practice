@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    /*此处写代码*/
+    *{
+        margin:0;
+        padding: 0;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    .nav{
+        overflow: hidden;
+        text-align: center;
+    }
+    .nav div{
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        border: 1px solid blue;
+        float: left;
+        background-color: red;
+        margin: 0 10px;
+        overflow: hidden;
+    }
+    .content{
+         
+        height: 300px;
+        width: 400px;
+        padding-top: 20px;
+        padding-left: 20px;
+        border: 1px solid red;
+        background-color:pink;
+        margin: 0 10px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .content div{
+        height: 300px;
+        width: 400px;
+        padding-top: 20px;
+        padding-left: 20px;
+        border: 1px solid red;
+        background-color:pink;
+        margin: 0 10px;
+        position: absolute;
+        top: 30px;
+        
+    }
+    .hidden{
+        display: none;
+    }
+
+    </style>
+</head>
+
+<body>
+    <!-- 此处写代码 -->
+    <!-- 先写框框两个大的、 -->
+    <!-- 标签框 -->
+    <div class="nav">
+        <div><a href="#">DOM0</a></div>
+        <div><a href="#">DOM2</a></div>
+        <div><a href="#">jQuery</a></div>
+    </div>
+    <!-- 内容、页 -->
+    <div class="content">
+        <div class="hidden hidden1"> DOM0</div>
+        <div class="hidden">DOM2</div>
+        <div class="hidden">jQuery</div>
+               
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        // $('div').children('.hidden1').removeClass("hidden");
+        $($('div').target).on('click',change());
+        function change (event) {
+            var event = event || window.event;
+            
+        }
+    </script>
+</body>
+
+</html>

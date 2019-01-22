@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>开始结束按钮颜色</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		input{margin-right: 20px;color: gray;background-color: pink;}
+	</style>
+</head>
+<body>
+	<input type="button" name="不要名字" value="开始" onmousemove="change(this)" onmouseleave="change2(this)">
+	
+	<input type="button" name="不要名字" value="结束" onmousemove="change(this)">
+<script type="text/javascript">
+	function change (argument) {
+		// body... 
+		argument.style.color = 'white';
+	}
+	function change2 (argument) {
+		// body... 
+		argument.style.color = 'blue';
+	}
+</script>
+</body>
+</html>

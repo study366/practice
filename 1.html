@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>员工合同到期时间</title>
+</head>
+<body>
+<script>
+    var date=new Date();
+    date.setFullYear(prompt("请输入年份"));
+    console.log(date.getFullYear());
+    date.setMonth(prompt("请输入月份")-1);
+    console.log(date.getMonth());
+    date.setDate(prompt("请输入日期"));
+    console.log(date.getDate());
+    document.write("入职时间是"+date.getFullYear()+"年"+(date.getMonth()+1)+"月"+date.getDate()+"日"+"\n");
+    document.write("到期时间是");
+    var enddate=new Date(date.getFullYear()+3,date.getMonth(),date.getDate());
+    document.write("<br>");
+
+    document.write("到期时间是"+enddate.getFullYear()+"年"+(enddate.getMonth()+1)+"月"+enddate.getDate()+"日");
+    // prompt("qingshuru");
+</script>
+</body>
+</html>
+

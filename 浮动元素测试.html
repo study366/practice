@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>浮动</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.one{width: 800px;height: 800px;background: black;margin:0 auto;color: white;}
+		.two-1,.two-2,.two-3,.two-4,.two-5{width: 400px;height:400px;background-color: blue;margin:10px 10px;color: black;float: left;}
+		.three-1,.three-2,.three-3{width:60px;height: 40px;background-color: pink;font-size: 10px;margin: 10px;}
+		.clear{clear: both;}
+		li{float: left;}
+	</style>
+</head>
+<body>
+	<div class="one">
+		我是一个大盒子
+		<div class="two-1">
+			我是第二大盒子
+			<div class="three-1">我是最小的</div>
+				<div class="three-2">我是最小的</div>
+					<div class="three-3">我是最小的</div>
+						<div class="three-4">我是最小的</div>
+		</div>
+		<div class="two-2">
+			我是第二大盒子
+			<div class="three-1">我是最小的</div>
+				<div class="three-2">我是最小的</div>
+					<div class="three-3">我是最小的</div>
+						<div class="three-4">我是最小的</div>
+		</div>
+		<div class="two-3">
+			我是第二大盒子
+			<div class="three-1">我是最小的</div>
+				<div class="three-2">我是最小的</div>
+					<div class="three-3">我是最小的</div>
+						<div class="three-4">我是最小的</div>
+		</div>
+		<div class="two-4">
+			我是第二大盒子
+			<ul>
+			<li>我是最小的</li>
+			<li>我是最小的</li>
+			<li>我是最小的</li>
+			<li>我是最小的</li>
+			</ul>		
+		</div>
+		<div class="clear"></div>
+		<p>溢出了啊</p>
+	</div>
+</body>
+</html>

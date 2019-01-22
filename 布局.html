@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>布局</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{margin:0px;
+			padding: 0px;}
+			.manner{po/*sition: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;*/
+				position: fixed;}
+		.nav{width: 100%;
+			height: 120px;
+			background-color: black;
+			border: 1px solid blue;
+			position: fixed;
+			/*top: 0px;*/
+			/*margin-top: 0;*/
+			/*left:0;*/
+			/*margin-left: -300px;*/
+			display: table;
+		}
+			.nav img{
+				position: absolute;
+				left: 10%;
+				margin: 0 auto;
+			}
+			.nav-con{position: absolute;
+				
+				left:70%;
+				right: 50px;
+				top: 0px;
+				bottom: 0px;
+				color: white;
+				/*background-color: pink;*/
+				margin: auto auto ;
+				display: table-cell;
+				vertical-align: middle;
+				height: 30px;
+
+			}
+			.content{
+				width: 100%;
+				height:800px;
+				background-color: pink;
+				color:white;
+				position: absolute;
+				top:120px;
+
+			}
+			.footer{
+				width: 100%;
+				height: 80px;
+				background-color: black;
+				position: fixed;
+				bottom: 0px;
+			}
+	</style>
+</head>
+<body>
+	<div class="manner">
+		<div class="nav">
+			<span><img src="http://climg.mukewang.com/58c0d2d900016ce303000100.png"></span>
+			<div class="nav-con">课程&nbsp&nbsp&nbsp&nbsp职业路径&nbsp&nbsp&nbsp&nbsp实战&nbsp&nbsp&nbsp&nbsp猿问&nbsp&nbsp&nbsp&nbsp手记
+			</div>
+			
+		</div>
+		<div class="content">
+			我是内容
+		</div>
+		<div class="footer">
+	
+		</div>
+	</div>
+	
+</body>
+</html>

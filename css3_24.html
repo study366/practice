@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+	    <meta charset="UTF-8">
+	    <title>伪类选择器</title>
+	    <style type="text/css">
+	    	*{text-decoration: none;}
+	    	p{height:30px;}
+	    	.suit a:link{color: orange;} 
+			.suit a:visited{color: green}
+			.suit a:hover{font-size: 20px;
+				color:green;
+				border: 10px solid; 
+				border-color:red;}
+			.suit a:active{color: orange}
+
+			.wc a:link{color: orange;} 
+			.wc a:visited{color: blue}
+			.wc a:hover{font-size: 20px;
+				color:green;
+				border: 10px solid; 
+				border-color:red;}
+			.wc a:active{color: orange}
+
+			.skin a:link{color: orange;} 
+			.skin a:visited{color: purple}
+			.skin a:hover{font-size: 20px;
+				color:green;
+				border: 10px solid; 
+				border-color:red;}
+			.skin a:active{color: orange}
+
+	     	/*p.suit visited{color: green}
+			p.wc visited{color: blue}
+			p.skin visited{color: purple}*/  /*补充代码*/
+	    </style>
+	</head>
+	<body>
+		<h2>商品列表</h2>
+		<p class="suit">
+			 <a href="#">衣服鞋帽</a>
+		</p>
+	    <p class="wc">
+	   	     <a href="#">厕所清洁</a>
+	    </p>
+	    <p class="skin">
+	   	     <a href="#">化妆用品</a>
+	    </p>	    
+	</body>
+</html>

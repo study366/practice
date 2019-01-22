@@ -1,0 +1,16 @@
+HTML5+CSS3 W3C规范<<中文版>>参考手册(提供下载) 包含两个chm电子书，一个是HTML5的中文参考手册、一个是CSS3的中文参考手册，经典，必须下载。
+
+W3C 在 1 月 22 日发布了最新的 HTML 5 工作草案。HTML 5 工作组包括 AOL, Apple, Google, IBM, Microsoft, Mozilla, Nokia, Opera 以及数百个其他的开发商。HTML 5 中的一些新特性：嵌入音频、视频、图片的函数、客户端数据存储，以及交互式文档。其他特性包括新的页面元素，比如 , , , 以及 。
+
+通过制定如何处理所有 HTML 元素以及如何从错误中恢复的精确规则，HTML 5 改进了互操作性，并减少了开发成本。
+
+
+
+
+
+
+红黑联盟：www.2cto.com
+
+电子书频道：http://www.2cto.com/ebook/
+
+网址：http://www.2cto.com/ebook/201608/65799.html

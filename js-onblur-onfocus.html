@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>onblur和onfocus</title>
+    <style type="text/css">
+        .red{
+    		border:1px solid red;
+    	}
+    </style>
+</head>
+<body>
+	姓名：<input id="id" type="text" value=""> <span id="id1"></span>
+	<script type="text/javascript">
+		// 补充代码
+        var a=document.getElementById("id");//接收input
+        console.log(+"1");
+        a.onfocus=function(){
+            // body...;
+            // alert("请输入你的姓名");
+            var b=document.getElementById("id1");//input后曾家元素span
+            b.innerHTML="请输入你的姓名";//span内容修改
+
+        }
+        a.onblur=function()
+
+        {     if (a.value.length<1) {//对input内容判断
+              var b=document.getElementById("id1");
+            b.innerHTML="1.0.";//span内容修改
+            }
+            else{
+                 var b=document.getElementById("id1");
+            b.innerHTML="";//span内容修改
+            }
+        }//总结：input输入框的内容在value
+	</script>
+</body>
+</html>

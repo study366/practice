@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>录入信息</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<input id="one" type="button" name="#" value="录入">
+	<script type="text/javascript">
+		var luru=document.getElementById("one");
+		luru.onclick= function() {
+			// body... 
+			var user= new Array();
+			user[0]=prompt("请输入员工姓名");
+			for(i=0;user[i]!="-1";i++){
+				user[i+1]=prompt("请输入员工姓名");
+			}
+			document.write(user[i]);
+			for(i=0;i<user.length;i++)
+			{
+				document.write(user[i]+"<br>");
+
+			}
+			document.write("已经退出了循环");
+
+		}
+		
+	</script>
+
+</body>
+</html>

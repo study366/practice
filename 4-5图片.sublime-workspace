@@ -1,0 +1,848 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ma",
+				"margin-bottom\tproperty"
+			],
+			[
+				"margin",
+				"margin-top\tproperty"
+			],
+			[
+				"im",
+				"images"
+			],
+			[
+				"i",
+				"images"
+			],
+			[
+				"z",
+				"z-index\tproperty"
+			],
+			[
+				"padd",
+				"padding-left\tproperty"
+			],
+			[
+				"mag",
+				"margin-left\tproperty"
+			],
+			[
+				"fon",
+				"font-size\tproperty"
+			],
+			[
+				"b",
+				"background\tproperty"
+			],
+			[
+				"pad",
+				"padding-left\tproperty"
+			],
+			[
+				"marg",
+				"margin\tproperty"
+			],
+			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"mat",
+				"margin-top\tproperty"
+			],
+			[
+				"align",
+				"text-align\tproperty"
+			],
+			[
+				"text",
+				"text-transform\tproperty"
+			],
+			[
+				"CO",
+				"color\tproperty"
+			],
+			[
+				"ba-s",
+				"background-size\tproperty"
+			],
+			[
+				"U",
+				"url()\tbackground-image"
+			],
+			[
+				"c",
+				"class\tAttr"
+			],
+			[
+				"se",
+				"size\tAttr"
+			],
+			[
+				"max",
+				"maxlength\tAttr"
+			],
+			[
+				"p",
+				"placeholder\tAttr"
+			],
+			[
+				"r",
+				"rows\tAttr"
+			],
+			[
+				"t",
+				"textarea\tTag"
+			],
+			[
+				"ca",
+				"caption\tTag"
+			],
+			[
+				"font",
+				"font-size\tproperty"
+			],
+			[
+				"op",
+				"option\tTag"
+			],
+			[
+				"s",
+				"span\tTag"
+			],
+			[
+				"bgco",
+				"background-color\tproperty"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"me",
+				"meta\tTag"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"fun",
+				"function_with_name"
+			],
+			[
+				"box",
+				"box-sizing\tproperty"
+			],
+			[
+				"client",
+				"clientHeight"
+			],
+			[
+				"docu",
+				"documentElement\t: Element Document"
+			],
+			[
+				"baco",
+				"background-color\tproperty"
+			],
+			[
+				"clas",
+				"className\t: DOMString Element"
+			],
+			[
+				"re",
+				"remove\t(): void Element"
+			],
+			[
+				"ov",
+				"overflow\tproperty"
+			],
+			[
+				"ta",
+				"target\t: EventTarget Event"
+			],
+			[
+				"pa",
+				"padding-left\tproperty"
+			],
+			[
+				"marginb",
+				"margin-bottom"
+			],
+			[
+				"bgc",
+				"backgroundColor\t = 'transparent' Style CSS"
+			],
+			[
+				"console",
+				"console_log"
+			],
+			[
+				"onm",
+				"onmouseover\t: EventHandler Window"
+			],
+			[
+				"oncl",
+				"onclick\t: EventHandler Window"
+			],
+			[
+				"dom",
+				"domObj1"
+			],
+			[
+				"geel",
+				"getElementsByClassName\t( classNames: DOMString ): HTMLCollection Element"
+			],
+			[
+				"inn",
+				"inner_box"
+			],
+			[
+				"inne",
+				"inner-box"
+			],
+			[
+				"onmo",
+				"onmouseover\t: EventHandler Document"
+			],
+			[
+				"inen",
+				"inner-box"
+			],
+			[
+				"mar",
+				"margin-left\tproperty"
+			],
+			[
+				"b-co",
+				"border-color\tproperty"
+			],
+			[
+				"ba",
+				"background-image\tproperty"
+			],
+			[
+				"rg",
+				"rgba"
+			],
+			[
+				"box-",
+				"box-shadow\tproperty"
+			],
+			[
+				"pos",
+				"position\tproperty"
+			],
+			[
+				"bod",
+				"border-left-color\tproperty"
+			],
+			[
+				"bag",
+				"background\tproperty"
+			],
+			[
+				"conso",
+				"console_log"
+			],
+			[
+				"time",
+				"timer"
+			],
+			[
+				"onmou",
+				"onmouseover\t: EventHandler Document"
+			],
+			[
+				"cla",
+				"className\t: DOMString Element"
+			],
+			[
+				"getele",
+				"getElementsByTagName\t( localName: DOMString ): HTMLCollection Element"
+			],
+			[
+				"bi",
+				"byId(\"main"
+			],
+			[
+				"tim",
+				"timer"
+			],
+			[
+				"sting",
+				"String\t( value: any ): String String"
+			],
+			[
+				"sr",
+				"script\tTag"
+			],
+			[
+				"bac",
+				"background\tproperty"
+			],
+			[
+				"te",
+				"text-align\tproperty"
+			],
+			[
+				"fil",
+				"filter\tproperty"
+			],
+			[
+				"u",
+				"url()\tbackground-image"
+			],
+			[
+				"lsit",
+				"list-style\tproperty"
+			],
+			[
+				"cont",
+				"content\t = '' Style CSS"
+			],
+			[
+				"bacc",
+				"background-color\tproperty"
+			],
+			[
+				"geti",
+				"getElementById\t( elementId: DOMString ): Element Document"
+			],
+			[
+				"thr",
+				"three"
+			],
+			[
+				"func",
+				"function_without_name"
+			],
+			[
+				"functi",
+				"function_without_name"
+			],
+			[
+				"onmoo",
+				"onmouseout\t: EventHandler Document"
+			],
+			[
+				"bu",
+				"button"
+			],
+			[
+				"onke",
+				"onkeyup\t: EventHandler Document"
+			],
+			[
+				"tex",
+				"text"
+			],
+			[
+				"gei",
+				"getElementById\t( elementId: DOMString ): Element Document"
+			],
+			[
+				"wr",
+				"write\t( text_..: DOMString ): void Document"
+			],
+			[
+				"geteb",
+				"getElementsByName\t( elementName: DOMString ): NodeList Document"
+			],
+			[
+				"onlo",
+				"onload\t: EventHandler FileReader"
+			],
+			[
+				"w",
+				"write\t( text_..: DOMString ): void Document"
+			],
+			[
+				"els",
+				"else_if"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"fontS",
+				"fontSize\t = 'xx-large' Style CSS"
+			],
+			[
+				"getel",
+				"getElementsByTagName\t( localName: DOMString ): HTMLCollection Element"
+			],
+			[
+				"ale",
+				"alert"
+			],
+			[
+				"gete",
+				"getElementsByTagName\t( localName: DOMString ): HTMLCollection Element"
+			],
+			[
+				"getE",
+				"getElementById\t( elementId: DOMString ): Element Document"
+			],
+			[
+				"one",
+				"one"
+			],
+			[
+				"cons",
+				"console_log"
+			],
+			[
+				"wri",
+				"write"
+			],
+			[
+				"getDa",
+				"getDate\t(): number Date"
+			],
+			[
+				"getda",
+				"getDay\t(): int Date"
+			],
+			[
+				"ge",
+				"getDay\t(): int Date"
+			],
+			[
+				"getm",
+				"getMonth\t(): int Date"
+			],
+			[
+				"doc",
+				"document\t: Document Window"
+			],
+			[
+				"pro",
+				"prompt"
+			],
+			[
+				"FullY",
+				"getFullYear\t(): int Date"
+			],
+			[
+				"ar",
+				"arrReverse"
+			],
+			[
+				"ab",
+				"about-one"
+			],
+			[
+				"cl",
+				"clear\tproperty"
+			],
+			[
+				"bg",
+				"background\tproperty"
+			],
+			[
+				"fl",
+				"float\tproperty"
+			],
+			[
+				"l",
+				"link\tTag"
+			],
+			[
+				"wo",
+				"wordone-one"
+			],
+			[
+				"o",
+				"overflow\tproperty"
+			],
+			[
+				"lis",
+				"list-style-type\tproperty"
+			],
+			[
+				"a",
+				"alt\tAttr"
+			],
+			[
+				"bot",
+				"button\tTag"
+			],
+			[
+				"Di",
+				"DIV\tTag"
+			],
+			[
+				"min",
+				"min-width\tproperty"
+			],
+			[
+				"co",
+				"coloum"
+			],
+			[
+				"col",
+				"color\tproperty"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"tra",
+				"transform\tproperty"
+			],
+			[
+				"d",
+				"div\tTag"
+			],
+			[
+				"fol",
+				"float\tproperty"
+			],
+			[
+				"div",
+				"div1"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pci",
+				"Package Control: Install Package"
+			],
+			[
+				"pc",
+				"Package Control: Discover Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"pkin",
+				"Package Control: Install Package"
+			],
+			[
+				"LiveReload: Enable/disable plugins enabld",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"LiveReload: Enable/disable plugins",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"add res",
+				"Package Control: Add Repository"
+			],
+			[
+				"control panel",
+				"Package Control: Add Channel"
+			],
+			[
+				"view",
+				"View: Toggle Menu"
+			],
+			[
+				"",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 158.399993896,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/F/code/form.css",
+		"/F/code/表单设计.html",
+		"/F/code/表格嵌套布局3-4.html",
+		"/F/code/css_pratise2.html",
+		"/F/code/大型作业-3-10.html",
+		"/F/code/自定义标签3-6.html",
+		"/F/code/页面布局3-4.html",
+		"/F/code/html结构2-13.html",
+		"/F/code/2-13编程练习.html",
+		"/F/code/css_base.html",
+		"/F/code/pageone.html",
+		"/F/nginx/nginx-1.14.2/html/github.html",
+		"/F/nginx/nginx-1.14.2/html/index.html",
+		"/F/code/xzrw1-1.css",
+		"/F/code/修真任务1-1.html",
+		"/F/code/jq笔记.html",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/F/源代码/xzrw1-1.css",
+		"/F/源代码/xzrw1-1.js",
+		"/F/nginx/nginx-1.14.2/conf/nginx.conf",
+		"/F/源代码/jq移动插入元素.html",
+		"/F/源代码/jq获取表单.html",
+		"/F/源代码/js工具.html",
+		"/F/源代码/jq事件.html",
+		"/F/源代码/jq特效.html",
+		"/F/源代码/jq练习next.html",
+		"/F/源代码/jq修改样式.html",
+		"/F/源代码/jq-css添加样式.html",
+		"/F/源代码/jq增删代码.html",
+		"/F/源代码/jq-attr.html",
+		"/F/源代码/jq-切换class.html",
+		"/F/源代码/jq-追加.html",
+		"/F/源代码/script_two.js",
+		"/F/源代码/轮播图.html",
+		"/F/源代码/css_two.css",
+		"/F/源代码/jquery.js",
+		"/F/源代码/项目_轮播图.html",
+		"/F/源代码/css_one.css",
+		"/F/源代码/script.js",
+		"/F/源代码/前端资料/JavaScript实现轮播特效（代码）/index.html",
+		"/F/源代码/前端资料/JavaScript实现轮播特效（代码）/css/style.css",
+		"/F/源代码/前端资料/JavaScript实现轮播特效（代码）/js/script.js",
+		"/F/源代码/慕课网源代码.html",
+		"/F/源代码/history3.html",
+		"/F/源代码/history2.html",
+		"/F/源代码/js-history.html",
+		"/F/源代码/js-location.html",
+		"/F/源代码/js-周期运行-闪烁文字.html",
+		"/F/源代码/js-延时删除.html",
+		"/F/源代码/js-windows-open-close.html",
+		"/F/源代码/js-onblur-onfocus.html",
+		"/F/源代码/js-bom.prompt.html",
+		"/F/源代码/js-键盘事件-字数限制.html",
+		"/F/源代码/js-mouse事件.html",
+		"/F/源代码/js-onchange更换背景色.html",
+		"/F/源代码/js-事件.html",
+		"/F/源代码/js-onload.html",
+		"/F/源代码/js-dom-录入信息.html",
+		"/F/源代码/js-dom-绑定事件.html",
+		"/F/源代码/js-onclick.html",
+		"/F/源代码/js-dom_.html",
+		"/F/源代码/js-增删内容样式.html",
+		"/F/源代码/js-增内容改样式.html",
+		"/F/源代码/js_dom-各行换色.html",
+		"/F/源代码/JS-DOM样式设置.html",
+		"/F/源代码/dom-依次弹出.html",
+		"/F/源代码/dom.html",
+		"/F/源代码/1.html",
+		"/F/源代码/js-cut.html",
+		"/F/源代码/js-splice.html",
+		"/F/源代码/js_排序.html",
+		"/F/源代码/JS-first.html",
+		"/F/源代码/js-检查特定语句出现次数.html",
+		"/F/源代码/js-stringcut.html",
+		"/C/Users/ismile/AppData/Roaming/Sublime Text 3/Packages/User/Localization.sublime-settings",
+		"/F/源代码/css_all_test.html",
+		"/F/源代码/浮动元素测试.html",
+		"/F/源代码/css_all_test.css",
+		"/F/源代码/布局-头部.html",
+		"/F/源代码/布局-图上加文字（层叠）.html",
+		"/F/源代码/CSS基础（源代码）/css_priority.html",
+		"/F/源代码/云师大官网复制图.html",
+		"/F/源代码/图文混排.html",
+		"/F/源代码/position.html",
+		"/F/源代码/圣杯布局练习.html",
+		"/F/源代码/布局test.html",
+		"/F/源代码/CSS基础（源代码）/css_base.html",
+		"/F/源代码/布局试一试.html",
+		"/F/源代码/两列布局.html",
+		"/F/源代码/布局.html",
+		"/F/源代码/position-test.html",
+		"/F/源代码/position-fixed.html",
+		"/F/源代码/position-center.html",
+		"/F/源代码/position-absolute.html",
+		"/F/源代码/float.html",
+		"/F/源代码/float-text.html",
+		"/F/源代码/float-test2-14.html",
+		"/F/源代码/float-test3-4.html",
+		"/F/源代码/float-test3-5.html",
+		"/F/源代码/float-test3-4",
+		"/F/源代码/list-style.html",
+		"/F/源代码/bgimg.html",
+		"/F/源代码/box_boder.html",
+		"/F/源代码/box-padding.html",
+		"/F/源代码/box-margin.html",
+		"/F/源代码/box-display.html",
+		"/F/源代码/box-test.html",
+		"/F/源代码/box-宽高.html",
+		"/F/源代码/box-高.html",
+		"/F/源代码/box-宽.html",
+		"/F/源代码/字体-对齐.html",
+		"/F/源代码/css-test4-3.html",
+		"/F/源代码/CESHI.html",
+		"/F/源代码/css-test.html",
+		"/F/源代码/字体-样式.html",
+		"/F/源代码/字体2-15.html",
+		"/F/源代码/css_伪类.html",
+		"/F/源代码/字体颜色.html",
+		"/F/源代码/css_权值.html",
+		"/F/源代码/css_pratise2_8.html",
+		"/F/源代码/字体2-7.html",
+		"/F/源代码/字体.html",
+		"/F/源代码/css_总练习.html",
+		"/F/源代码/css_4-17.html",
+		"/F/源代码/css_顺序.html",
+		"/F/源代码/css3_25.html",
+		"/F/源代码/css_fenli.html",
+		"/F/源代码/css_2_12.css"
+	],
+	"find":
+	{
+		"height": 27.2
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.2
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "4-5图片.sublime-project",
+	"replace":
+	{
+		"height": 51.2
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 188.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
