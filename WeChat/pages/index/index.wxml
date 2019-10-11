@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="container" style="background-image:url('./img/bg.jpg')">
+  <view class="header">
+    <text class="title">今天吃什么</text>     
+  </view>
+  <view class="today-quotes">
+    <text>今天吃什么呢 </text>
+  </view>
+  <view class="today-menu">    
+    <text wx:for="{{todayMenu}}" wx:if="{{thisWeekMenu.length}}">{{index}}：{{item}}</text>    
+  </view>
+  <view class="button" bindtap="creatMenu" >
+    <button  size="{{defaultSize}}">点击生成菜单</button>
+  </view>  
+  <swiper display-multiple-items="4" class="this-week-menu" loop>
+    <swiper-item class="this-week-menu-list" >  
+      <text>类别</text>   
+      <text class="breakfast">早餐</text>
+      <text class="lunch">午餐</text>
+      <text class="dinner">晚餐</text>
+    </swiper-item>  
+    <swiper-item class="this-week-menu-list" wx:for="{{thisWeekMenu}}">       
+      <text wx:for="{{item}}">{{item}}</text>
+    </swiper-item>
+  </swiper>  
+</view>
+  

@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+#items .home_display_container{
+	display: flex;	
+	padding-top: 0.1rem;
+	padding-left: 0.06rem;
+	padding-right: 0.06rem;
+	flex-wrap: wrap;
+}
+#items .home_display_module{
+	width: 50%;
+	box-sizing: border-box;	
+	margin-bottom: 0.2rem;
+}
+#items .home_display_module > a{	
+	display:flex;
+	flex-direction: column;
+	width: 1.81rem;
+	height: 1.43rem;
+	
+}
+#items .home_display_module > a > .home_display_pic{	
+	background:  url(../img/wechat.jpg) no-repeat;
+	background-origin: padding-box;
+	background-position-x: 50%;
+	background-position-y: 50%;
+	background-size: 1rem 2rem;
+	/*border-radius: 	10% 20% 30% 40% / 40% 30% 20% 10%;*/
+	box-sizing: border-box;
+	display:block;
+	width: 1.69rem;
+	height: 1.06rem;
+	color: #fff;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	/*animation: bgChange 2s infinite alternate;*/
+}
+#items .home_display_container > .home_display_module:nth-child(2) > a > .home_display_pic{
+	background:  url(../img/home.png) no-repeat;
+	background-position-x: -6%;
+	background-position-y: 8%;
+	background-size: 2rem 4rem;
+	box-shadow: 1px 1px 1px #1a1c1063;
+}
+#items .home_display_container > .home_display_module:nth-child(3) > a > .home_display_pic{
+	background:  url(../img/waterfa.png) no-repeat;
+	background-position-x: -6%;
+	background-position-y: 8%;
+	background-size: 2.7rem 4rem;
+	box-shadow: 1px 1px 1px #1a1c1063;
+	animation: bgChange3 10s infinite linear;
+}
+@keyframes bgChange3{
+	0%{
+		background-position-y: 0%;
+	}
+	50%{
+		background-position-y: 100%;
+	}
+	50.010000041%{
+		background-position-y: 20%;
+	}
+	to{
+		
+		background-position-y: 100%;
+	}
+
+}
+#items .home_display_container > .home_display_module:nth-child(4) > a > .home_display_pic{
+	background:  url(../img/banner1.png) no-repeat;
+				
+				
+	background-position-x: -6%;
+	background-position-y: 8%;
+	background-size: 1.7rem 1rem;
+	box-shadow: 1px 1px 1px #1a1c1063;
+	animation: bgChange4 8s infinite linear;
+}
+@keyframes bgChange4{
+	0%{		
+		background:url(../img/banner1.png)  no-repeat;
+		background-position-x: -6%;
+		background-position-y: 8%;
+		background-size: 1.7rem 1rem;
+	}	
+	50%{
+		background:url(../img/banner2.png)  no-repeat;
+		background-position-x: -6%;
+		background-position-y: 8%;
+		background-size: 1.7rem 1rem;
+	
+	to{
+		
+		background:url(../img/banner3.png)  no-repeat;
+		background-position-x: -6%;
+		background-position-y: 8%;
+		background-size: 1.7rem 1rem;
+	}
+
+}
+#items .home_display_module > a > .home_display_pic > img{
+	width: 40%;
+	height: 40%;
+	border-radius: 0.05rem;	
+}
+#items .home_display_module > a > .home_display_info{
+	font-size: 0.13rem;
+	line-height: 0.25rem;
+	color: #000;	
+	width: 1.69rem;
+}
+#items .home_display_module > a > .home_display_info > p:first-child{
+	text-align: center;	
+	color: #E87E04;
+}
+#items .home_display_module > a > .home_display_info > p:last-child{
+	text-align: center;	
+	color: #787978;
+	line-height: 0.13rem;
+}

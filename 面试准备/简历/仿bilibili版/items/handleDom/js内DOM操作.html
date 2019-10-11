@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		<style type="text/css">
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    div:not(:nth-of-type(2)) {
+        width: 500px;
+        height: 100%;
+        background-color: #00c4ff7a;
+        margin: 0 auto;
+    }
+    /*ul默认有外边距*/
+
+    ul {
+        width: 300px;
+        height: 100%;
+        background-color: #f9c3e6d6;
+        list-style: none;
+        /*清除默认边距*/
+        margin: 0;
+        padding: 0;
+        margin: 20px auto;
+        margin-bottom: 30px;
+    }
+
+    li {
+        width: 200px;
+        height: 30px;
+        line-height: 30px;
+        margin: 30px auto;
+        background-color: #cdffc0;
+    }
+      </style>
+		<!-- li{
+			display: block;
+			width: 100px;
+			text-align: center;;
+			background: #699;
+			padding: 20px;	 -->
+		</style> 
+</head>
+<body>
+	 <div>
+    <p>
+      <span>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+      </span>
+      <span>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+      </span>
+      <span>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+      </span>
+    </p>
+  </div>
+  <div id="wrap">
+      <ul id="list">
+        <li>第一个li</li>
+        <li>第二个li</li>
+        <li>第三个li</li>
+      </ul>
+    </div> 
+	<!-- 小伙伴们，我们学习了创建节点的4种方式，接下来根据效果图完成代码！
+效果图如下： -->
+
+<script>
+	var ul = document.createElement('ul'),
+		fragment = document.createDocumentFragment();
+		comment = document.createComment('这是一个注释');
+		
+		for(var i = 0; i < 3; i++){
+			li = document.createElement('li');
+			li.className = 'li';
+			li.appendChild(document.createTextNode('第'+ ( i + 1 ) +'个自动创建的li'));
+			console.log('')
+			fragment.appendChild(li);
+			console.log(fragment);
+		}
+		ul.appendChild(fragment);
+		document.body.appendChild(ul);
+		document.body.insertBefore(comment, ul);
+		// 伙伴们，我们学习了如何去遍历节点，那么接下来我们将代码中的节点全部遍历出来（不包含空白节点）
+		var recordNode = '';
+		function traverNode (string,Node) {
+			
+			if(Node.tagName){
+				recordNode += string + Node.tagName +'<br/>';
+			}
+			for(var i = 0 ; i < Node.childNodes.length; i++){
+				traverNode(string+'+|',Node.childNodes[i]);
+			}
+			
+			return recordNode;
+		}		
+		document.write(traverNode('+',document));
+		// 小伙伴们，学习了节点的替换，接下来让我们将div中的ul替换成下列的内容
+		 var wrap = document.querySelector('#wrap'),
+		 	ul = document.createElement('ul')
+		 	fragment1 = document.createDocumentFragment()
+		 	;
+		 	
+		 	newContent=document.createTextNode('html');
+		 	
+		 	for(var i = 0; i<4 ;i++){
+		 		newLi = document.createElement('li')
+
+		 		newLi.appendChild(document.createTextNode('html'));
+		 		
+		 		
+		 		fragment1.appendChild(newLi);
+		 	}
+		 	console.log(fragment1.appendChild(ul));
+		 	wrap.replaceChild(fragment1,wrap.firstElementChild);
+		 	// 点击按钮增删元素
+		 	// 学会了这么多新的方法,观察下图效果是如何实现的呢?快自己动手试一试吧!
+</script>
+<div id="box">
+        <button id="btnAdd">添加元素</button>
+        <button id="btnRemove">删除元素</button>
+        <ul id="list">我是ul
+            <li>我是li1</li>
+            <li>我是li2</li>
+            <li>我是li3</li>
+        </ul>
+    </div>
+    <script>
+    	var btnAdd = document.querySelector('#btnAdd'),
+    		btnRemove = document.querySelector('#btnRemove'),
+    		ul = document.querySelector('#list'),
+            li = ul.querySelectorAll('li');
+            console.log(li);
+            console.log(li.length);
+            for(var i = 0;i < li.length; i++){               
+                !function () {
+                    var j = i;
+                   var  color = '';
+
+                    li[i].onclick = function () {
+                        this.style.backgroundColor = 'orange';
+                        color = 'orange';
+                    }
+                    li[i].onmouseenter = function () {
+                        color = this.style.backgroundColor;
+                        this.style.backgroundColor = 'purple';
+                    }
+                    li[i].onmouseleave = function () {
+                        
+                        this.style.backgroundColor = color;
+                    }
+                }();
+            }
+            btnAdd.onclick =function () {
+                var newli = document.createElement('li'),
+                oldLi = ul.querySelectorAll('li'),
+                newText = document.createTextNode('我是li'+ (oldLi.length+1));
+                newli.appendChild(newText);
+                ul.appendChild(newli);
+            }
+            btnRemove.onclick =function () {                
+                oldLi = ul.lastChild;               
+                ul.removeChild(oldLi);
+            }
+    </script>
+</body>
+</html>

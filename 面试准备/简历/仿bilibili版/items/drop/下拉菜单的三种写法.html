@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>下拉菜单</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+		a{
+			text-decoration: none;
+		}
+		li{
+			list-style: none;
+		}
+		header{
+			height: 43px;
+			line-height: 43px;
+			background-color: #ddd;
+			font-size: 12px;
+		}
+		.container{
+			width: 1200px;
+			margin: 0 auto;
+		}
+		.float-left{
+			float: left;
+			padding: 0 10px;
+		}
+		.float-right{
+			float: right;
+			padding: 0 10px;
+		}
+		a{
+			color: #4d555d;
+		}
+		.dropdown-layer{
+			display: none;
+			position: absolute;
+		}
+		.dropdown:hover .dropdown-layer{
+			display: block;
+		}
+	
+	</style>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<ul class="float-left">
+				<li class="float-left">亲，请登录</li>
+				<li class="float-left">免费注册</li>
+				<li class="float-left">手机逛淘宝</li>
+			</ul>
+			<ul class="float-right">
+				<li class="dropdown float-left">
+					<a href="javascript:void(0)">我的慕淘</a>
+					<ul class="dropdown-layer">
+						<li><a href="javascript:void(0)">已买到的宝贝</a></li>
+						<li><a href="javascript:void(0)">我的足迹</a></li>
+					</ul>
+				</li>
+				<li class="dropdown float-left">收藏夹</li>
+				<li class="dropdown float-left">商品分类</li>
+				<li class="dropdown float-left">卖家中心</li>
+				<li class="dropdown float-left">练习客服</li>
+			</ul>
+		</div>
+	</header>
+</body>
+</html>

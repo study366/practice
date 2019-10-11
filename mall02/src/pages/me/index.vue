@@ -81,11 +81,11 @@
 						isNew: false
 					},{
 						iconClass:{"icon-sousuo": true},
-						content: "1.聊天列表界面点击进入聊天界面",
+						content: "1.聊天列表界面点击进入聊天界面 ok",
 						isNew: false
 					},{
 						iconClass:{"icon-sousuo": true},
-						content: "2.好友信息,聊天信息本地存储",
+						content: "2.好友信息,聊天信息本地存储 ",
 						isNew: false
 					},{
 						iconClass:{"icon-sousuo": true},
@@ -101,7 +101,11 @@
 						isNew: false
 					},{
 						iconClass:{"icon-sousuo": true},
-						content: "6.调用http://drea.cc/mm.php 的api实现与机器人聊天",
+						content: "6.调用http://drea.cc/mm.php 的api实现与机器人聊天 ok",
+						isNew: false
+					},{
+						iconClass:{"icon-sousuo": true},
+						content: "7.如果有50000条记录，如何显示呢，每屏显示15条，那么总共显示5屏高度，上下各两屏高度，上滑一屏的距离unshift一屏，并且pop一屏，加载一屏删一屏",
 						isNew: false
 					}]
 				];

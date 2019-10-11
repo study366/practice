@@ -1,0 +1,80 @@
+@charset "UTF-8";
+.target{
+
+}
+.home_title{
+	padding: 0.15rem 0.1rem 0 0.1rem;
+	overflow: hidden;
+	font-size: 0.12rem;
+	color: #666;
+	border-bottom: 0.01rem;
+
+	box-shadow: 0.01rem  0.05rem 1.02rem #ccc;
+	box-shadow: 
+}
+.home_title > p:first-child{
+	float: left;
+	font-weight: bold;
+}
+.home_title > p:last-child{
+	float: right;
+	padding-right: 0.25rem;
+}
+.home_title > p:last-child > i{
+	font-weight: 200;
+	font-size: 0.12rem;
+}
+.home_title > p:last-child > i.icon-fanhui{
+	
+	display: inline-block;
+	transform: rotate(180deg);
+}
+
+.home_display_container{
+	display: flex;	
+	padding-top: 0.1rem;
+	padding-left: 0.06rem;
+	padding-right: 0.06rem;
+	flex-wrap: wrap;
+}
+.home_display_module{
+	width: 50%;
+	box-sizing: border-box;	
+	margin-bottom: 0.2rem;
+}
+.home_display_module > a{	
+	display:flex;
+	flex-direction: column;
+	width: 1.81rem;
+	height: 1.43rem;
+	
+}
+.home_display_module > a > .home_display_pic{	
+	display:block;
+	width: 1.69rem;
+	height: 1.06rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.home_display_module > a > .home_display_pic > img{
+	width: 40%;
+	height: 40%;
+	border-radius: 0.05rem;	
+}
+.home_display_module > a > .home_display_info{
+	font-size: 0.13rem;
+	line-height: 0.25rem;
+	color: #000;	
+	width: 1.69rem;
+}
+.home_display_module > a > .home_display_info > p:first-child{
+	text-align: center;	
+	color: #E87E04;
+}
+.home_display_module > a > .home_display_info > p:last-child{
+	text-align: center;	
+	color: #787978;
+	line-height: 0.13rem;
+}

@@ -1,0 +1,57 @@
+						/*模拟数据*/
+						var data=[ {}
+
+						]
+
+						/*基本样式设置*/
+						* {
+						    margin: 0;
+						    padding: 0;
+						    border: none;	
+						}
+
+						a {
+						    text-decoration: none;
+						    color: #000;
+						}
+
+						body {
+						    height: auto;
+						    background-color: #ddd;
+						    font-size: 18px;
+						}
+
+						.container {
+						    width: auto;
+
+						    margin: 0 auto;
+						    position: relative;
+
+						}
+
+						.container>div {
+						    box-sizing: border-box;
+						    width: 280px;
+						    margin: 10px;
+						    float: left;
+						    border-radius: 5px;
+						    background-color: #fff;
+						}
+
+						.container>div:hover {
+						    opacity: 0.9;
+						}
+
+						.container>div>img {
+						    width: 100%;
+						}
+
+						.container>div>a {
+						    display: block;
+						    text-align: center;
+						    line-height: 40px;
+						}
+
+						.container>div>a:hover {
+						    color: #666;
+						}

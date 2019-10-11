@@ -1,10 +1,10 @@
 <template>
-	<div class="g-content-container">
+	<div class="g-content-container" >
 		<MeScroll class="contacts" ref="scroll">		
 			<section class="contacts-header">
 				<ul class="contacts-one">
-					<li class="contacts-item" v-for="(item,index) in contactsHeaderList">
-						<router-link to="/home" class="contacts-link">
+					<li class="contacts-item" v-for="(item,index) in contactsList">
+						<router-link to="/chats" class="contacts-link">
 							<p class="contacts-pic contacts-icon" :class="item.backgroundClass">
 								<i class="iconfont icon-gouwuche" :class="item.iconClass"></i>
 							</p>
@@ -14,10 +14,14 @@
 				</ul>
 			</section>
 			<section class="contacts-header">
+				<button @click="testVueX" style="line-height: 2em;margin: 0 auto;padding: 0 1em;display: block;background: #3efa3f">测试vueX</button>
+				<button @click="DelContact" style="line-height: 2em;margin: 0 auto;padding: 0 1em;display: block;background: #3efa3f">删除一个联系人</button>
+				
+				<p class="contact-num">{{contactCount}}位联系人</p>
 				<ul class="contacts-one">
 					<li class="contacts-item" v-for="(item,index) in contacts">
-						<p class="anchor" :id="item.id" v-if="item.id">{{item.idCode}}</p>
-						<router-link to="/#" class="contacts-link">
+						<p class="anchor" :id="item.id" v-if="item.id">{{item.id}}</p>
+						<router-link :to="{path:'/facechat',query:{idCard:item.idCard}}" class="contacts-link" v-if="item.name">
 							<p class="contacts-pic">
 								<img :src="item.pic"></img>
 							</p>
@@ -26,7 +30,7 @@
 					</li>					
 				</ul>				
 			</section>
-			<p class="contact-num">{{contacts.length}}位联系人</p>				
+			<p class="contact-num">{{contacts.length}}位联系人</p>						
 		</MeScroll>
 		
 		<div class="contact-nav-box" >			
@@ -39,101 +43,153 @@
 <script>
 	import MeScroll from 'base/scroll';
 	import {randName,randomNum} from 'pages/chats/config.js';
+	import toPinyin from 'assets/js/pinyin4js';
+	import {cht2chsLibs} from "assets/js/libs/cht2chs";
+	import storage from "assets/js/storage";
+	import {contactsList} from "./config";
 	export default{
 		name: 'Contacts',
 		data(){
 			return {
 				contacts: [],
 				navList: [],
-				contactsHeaderList: []	
+				contactsList: [],
+				consoleInfo:''	
 			};
 		},
 		components:{
 			MeScroll
 		},
 		created(){	
-			this.init();				
+			this.init();	
 		},
 		mounted(){
-			/*
-			   操作dom就在这个函数里面
-			   更新滚动条，
-			   委托父元素监听点击事件 
-			*/
-			this.updateScroll();
-			let myThis = this;
-			var a = document.getElementsByClassName("contact-nav-box")[0];
-			a.addEventListener("click", (e) =>{
-				var c = e.target.innerHTML;				
-
-				var b = document.getElementById(c);				
-				var d = b.offsetTop;
-				myThis.$refs.scroll.scrollTo(-d);
-				
-			}, true);
-			
+			this.addClickListener();			
+		},
+		computed:{
+			contactCount(){
+				return this.$store.state.contactData.length;
+			}
 		},
 		methods:{
+			/**API 区域***/
+			/** updateScroll()*/
+			DelContact(){
+				this.$store.commit("popContact");
+			},
+			testVueX(){
+				this.$store.commit("cloneContact",this.contacts);
+				console.log(this.$store.state.contactData);
+			},			
+			updateScroll(){								
+				this.$refs.scroll.updataScroll();
+			},
+
+			/****交互事件区域***/
+			addClickListener(){	//给右侧导航添加委托事件			
+				var navBox = document.getElementsByClassName("contact-nav-box")[0];
+				navBox.addEventListener("click", (event) =>{
+					var innerText = event.target.innerText;
+					var targetAnchor = document.getElementById(innerText);				
+					var targetOffsetTop = targetAnchor.offsetTop;
+					this.$refs.scroll.scrollTo(-targetOffsetTop);				
+				}, true);
+			},
+
 			init(){	
-			/*
-			**生成nav
-			**/			
+				this._initNav();				
+				this._initContacts();				
+				this.contactsList = contactsList;
+
+			},
+			_initNav(){
 				let initCode = 64;
 				for(var i = 0; i < 26; i++){
 					initCode += 1;
 					let charCode = String.fromCharCode(initCode.toString(10));					
 					this.navList[i] = charCode;
-				}
-				
+				}				
 				this.navList.push("#");
-			/*
-			*写contacts数组			
-			**/ let contactsNumber = randomNum(26,150);//随机联系人数量
-				let codeNum = 64; //A是65
-				let curCodeNum;  //保存新的codeNum
-				let closeToke = 1;
-				for(var i = 0; i < contactsNumber; i++){					
-					this.contacts[i] = {};
-					curCodeNum = codeNum + (codeNum === 64 ? 1 : (Math.random() > 0.7));
-							
-					if(curCodeNum > codeNum){ //如果加了1 转换为chat作为id
-						if(curCodeNum < 64 + 26){
-							codeNum = curCodeNum;
-							var charCode = String.fromCharCode(curCodeNum.toString(10));
-							this.contacts[i].id = charCode;
-							this.contacts[i].idCode = charCode;
-						}else if(closeToke){
-							this.contacts[i].id = "#";
-							this.contacts[i].idCode = "#";
-							closeToke = false;
-						}
-						
-					}
-					this.contacts[i].pic = "https://uploadbeta.com/api/pictures/random/?key=%E6%8E%A8%E5%A5%B3%E9%83%8E";
-					this.contacts[i].name = randName();	
-				}			
-				this.contactsHeaderList = [{
-					backgroundClass: {"bg-blue": false},
-					iconClass: {"icon-gouwuche": true},
-					content: "新的朋友"
-				},{
-					backgroundClass: {"bg-blue": true},
-					iconClass: {"icon-gouwuche": true},
-					content: "群聊"
-				},{
-					backgroundClass: {"bg-green": true},
-					iconClass: {"icon-gouwuche": true},
-					content: "标签"
-				},{
-					backgroundClass: {"bg-green": true},
-					iconClass: {"icon-gouwuche": true},
-					content: "公众号"
-				}];
+
 			},
+			_initContacts(){
+				let contacts = storage.get('contacts');
+				
+				if(contacts && contacts.length > 50){
+					this.contacts = contacts;
+					return void(0);
+				}
+				this._randomContacts();
+				this._sortContactsByPinyin();
+				this._addIndexForContact();
+			},
+			_randomContacts(){
+				let contactsNumber = randomNum(80,150);//随机联系人数量
+				
+				for(var i = 0; i < contactsNumber; i++){				
+					this.contacts[i] = {};
+					this.contacts[i].pic = "https://uploadbeta.com/api/pictures/random/?key=%E6%8E%A8%E5%A5%B3%E9%83%8E";				
+					this.contacts[i].name = randName();
+					this.contacts[i].idCard = Math.random();
+					this.contacts[i].content = [];
 
+				}
 
-			updateScroll(){								
-				this.$refs.scroll.updataScroll();
+			},
+			_sortContactsByPinyin(){
+				let contactsNumber = this.contacts.length;
+
+				for(var i = 0; i < contactsNumber; i++){
+					this.contacts[i].namePinyin = toPinyin(this.contacts[i].name);
+				}
+				this.contacts.sort((item1,item2) =>{
+					return item1.namePinyin > item2.namePinyin ? 1 : -1;
+				})				
+
+			},
+			_addIndexForContact(){//数组中加入索引  存入本地及vuex
+
+				let contacesArray = [];	
+				let navLength = this.navList.length;
+				let contacesLength = this.contacts.length;
+
+				for(var j = 0, i = 0, lastIndex = 0; j < navLength; j++){
+					
+					
+					var checkCode = this.navList[j].toLowerCase();//因为导航 大写 拼音小写
+						
+					for( ; i < contacesLength; i ++){//为了只遍历一次，变量放在了上层定义
+						let contacts = this.contacts;						
+						let contact = this.contacts[i];
+						let name = this.contacts[i].namePinyin;
+						let namePinyin = this.contacts[i].namePinyin.split('')[0];
+						if( namePinyin !== checkCode){
+							
+							break;
+						};															
+					} 
+					let navListNavItem = {
+						id: this.navList[j]
+					}
+					contacesArray.push(navListNavItem);	
+					
+
+					if(lastIndex != i){
+						contacesArray.push(...this.contacts.slice(lastIndex,i));
+					}else{//说明本次循环 nav无对应contact
+						
+						contacesArray.pop();
+					}
+					lastIndex = i;
+					
+				}	
+				console.log("|||||||")
+				this.contacts = contacesArray;
+				storage.set('contacts',contacesArray);
+
+			},
+			_autoAddChatRecord(){
+
 			}
 
 		}

@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+@charset "UTF-8";
+
+.nav-bars{
+	width: 100%;
+}
+.nav-bars.fixed{
+	position: fixed;
+	top: 0;
+	z-index: 2;
+}
+
+.nav-bars > ul{
+	display: flex;
+	padding-right: 0.1rem;
+}
+.nav-bars > ul > li{
+	width: 25%;
+	font-size: 0.12rem;
+	line-height: 0.34rem;
+	overflow: hidden;
+	text-indent: 0;
+}
+.nav-bars > ul > li >a{
+	width: 100%;
+	height: 100%;
+	text-indent: 0;
+	text-align: center;
+	color: #666;
+	transition: background 1s;
+}
+.nav-bars > ul > li.active >a{
+	background: #ddd;
+	color: red;
+
+}
+.nav-bars > ul > li > a.active{
+	background : #ddd;
+	color:red;
+
+} 
+.nav-bars > ul > li > a:hover{
+	color: red;
+}

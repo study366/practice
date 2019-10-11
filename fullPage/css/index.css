@@ -1,0 +1,23 @@
+.section{
+
+	text-align: center;
+	position: relative;
+}
+.section1 .div{
+	position: absolute;
+	width: 100%;
+	top: 130px;
+}
+.section1 .img{
+	position: absolute ;	
+	top: 280px;
+	width: 100%;
+	margin-top: 50px;
+	height: 130px;
+}
+.section1 img{
+	display: block;
+		margin: 0 auto;
+		height: 130px;
+}
+

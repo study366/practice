@@ -1,0 +1,36 @@
+@charset "UTF-8";
+h1{
+	font-size: 26px;
+	line-height: 50px;
+	font-weight: bold;
+	text-align: center;
+	border-bottom: 5px solid #64acac;
+}
+h2{
+	font-size: 22px;
+	line-height: 40px;
+	font-weight: bold;
+	border-bottom:  3px solid #64acac;
+	
+}	
+h3{
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: bold;
+}
+p{
+	line-height: 25px;
+	text-indent: 2em;
+}
+li{
+	list-style: none;
+	text-indent: 2em;
+	line-height: 25px;
+}
+
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
