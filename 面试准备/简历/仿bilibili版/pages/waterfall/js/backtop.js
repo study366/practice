@@ -3,7 +3,7 @@
 	******container scroll
 	******backtop / navFixed
 	*/
-	window.onload = function () {
+	// window.onload = function () {window.onload 冲突
 		console.log('backtop ok');
 		let backtop = document.querySelector(".backTop");
 		let container = document.querySelector(".container");
@@ -20,9 +20,7 @@
 			}
 			
 		},100));
-
-
-	}
+	// }
 	function debounce1 (fn,wait) {
 		let  timeout ;	
 		return function () {
