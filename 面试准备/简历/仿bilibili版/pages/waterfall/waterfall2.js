@@ -40,7 +40,7 @@
 		let containerWidth = container.parentElement.clientWidth;
 		let boxWidth = document.querySelector(".box").offsetWidth * 1.25;//宽0.8rem 外边距0.1rem 故*1.25
 		let cols = Math.floor(containerWidth / boxWidth);
-		    container.style.width = cols * boxWidth*1.1 + "px";
+		    container.style.width = cols * boxWidth*1.01 + "px";
 		let frameElement =document.createDocumentFragment();
     // 追加并设置位置盒子    
 		for(var i = 1; i < cols; i++){
