@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.form{
+			width: 800px;
+			height: 800px;
+			margin: 0 auto;
+			background: #ddd;
+		}
+		.head{
+			height: 60px;
+			line-height: 60px;
+			background: #2375ba;
+			text-align: center;
+			margin-bottom: 50px;
+		}
+		.left{
+			float: left;
+			width: 350px;
+			text-align: right;
+
+
+		}
+		.left label{
+			display: block;
+			margin-right: 20px;
+		}
+		.middle{
+			float: left;
+			width: 450px;
+		}
+		.middle input,.middle select{
+			display: block;
+			width: 150px;
+			margin-bottom: 19px;
+
+		}
+		.middle span{
+			position: absolute;
+			margin-top:-38px;
+			margin-left: 180px; 
+		}
+		.submit{
+			display: block;
+			width: 60px;
+			height: 30px;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="form">
+		<div class="head">
+			<p>用户注册</p>
+		</div>
+		<div class="box">
+			<div class="left">
+				<label for="username">用户名</label><br>
+				<label for="password">登录密码</label><br>
+				<label for="confirmPassword">确认密码</label><br>
+				<label for="name">姓名</label><br>
+				<label for="sex">性别</label><br>
+				<label for="id">身份证号码</label><br>
+				<label for="email">邮箱</label><br>
+				<label for="phoneNumber">手机号码</label><br>
+			</div>
+			<div class="middle">
+				<input type="text" name="username"><span></span>
+				<input type="password" name="password"><span></span>
+				<input type="password" name="confirmPassword"><span></span>
+				<input type="text" name="name"><span></span>
+				<select name="sex" id="">
+					<option value="male">男</option>
+					<option value="famale">女</option>
+				</select><span></span>
+				<input type="text" name="id"><span></span>
+				<input type="text" name="email"><span></span>
+				<input type="text" name="phoneNumber"><span></span>
+			</div>
+				<input type="submit" class="submit">				
+		</div>
+	</div>
+	<script>
+		var middle = document.querySelector('.middle');
+		// input = box.querySelectorAll('input');
+			middle.addEventListener('focusout',function (event) {
+				if(event.target.name =='username'){
+					var regstr = /^[a-zA-Z]\w{5,19}$/;
+					if(!regstr.exec(event.target.value)){
+						event.target.nextSibling.innerHTML = '请输入6-20位字母数字或_，字母开头';
+						console.log('请输入6-20位字母数字或_，字母开头');
+					}
+					else{
+						event.target.nextSibling.innerHTML = 'ok';
+						console.log('ok');
+					}
+				}else if (event.target.name =='password') {
+					var regstr = /^\w{6,18}$/;
+					if(!regstr.exec(event.target.value)){
+						event.target.nextSibling.innerHTML = '请设置密码 要求6-18位字母数字或_';
+						console.log('请设置密码 要求6-18位字母数字或_');
+					}
+					else{
+						event.target.nextSibling.innerHTML = 'ok';
+						console.log('ok');
+					}
+				}
+				else if (event.target.name =='confirmPassword') {
+					var regstr = event.target.previousSibling.previousSibling.previousSibling.value ;
+					console.log(event.target.previousSibling.previousSibling.previousSibling);
+					if(regstr != event.target.value){
+						console.log(regstr,event.target.value);
+						event.target.nextSibling.innerHTML = '确认密码一致';
+						console.log('确认密码一致');
+					}
+					else{
+						event.target.nextSibling.innerHTML = 'ok';
+						console.log('ok');
+					}
+				}
+				else if (event.target.name =='name') {
+					var regstr = /^[\u1e00-\u9fa5]{2,5}$/;
+					if(!regstr.exec(event.target.value)){
+						event.target.nextSibling.innerHTML = '请输入真实姓名，2-5位汉字';
+						console.log('请输入真实姓名，2-5位汉字');
+					}
+					else{
+						event.target.nextSibling.innerHTML = 'ok';
+						console.log('ok');
+					}
+				}
+				else if (event.target.name =='id') {
+					var regstr = /^\d{15}$|^\d{17}[Xx\d]$/;
+					if(!regstr.exec(event.target.value)){
+						event.target.nextSibling.innerHTML = '请输入正确的身份证号';
+						console.log('请输入正确的身份证号');
+					}
+					else{
+						event.target.nextSibling.innerHTML = 'ok';
+						console.log('ok');
+					}
+				}
+				else if (event.target.name =='email') {
+					var regstr = /^[\w]+@[a-zA-Z]{2,4}\.[a-zA-Z]{2,3}\.?([a-zA-Z]){2,3}$/;
+					if(!regstr.exec(event.target.value)){
+						event.target.nextSibling.innerHTML = '请输入正确的邮箱';
+						console.log('请输入正确的邮箱');
+					}
+					else{
+						event.target.nextSibling.innerHTML = 'ok';
+						console.log('ok');
+					}
+				}
+				else if (event.target.name =='phoneNumber') {
+					var regstr = /^\d{11}$/;
+					if(!regstr.exec(event.target.value)){
+						event.target.nextSibling.innerHTML = '请输入电话号码';
+						console.log('请输入6-20位字母数字或_，字母开头');
+					}
+					else{
+						event.target.nextSibling.innerHTML = 'ok';
+						console.log('ok');
+					}
+				}			
+					
+			})
+
+	</script>
+</body>
+</html>

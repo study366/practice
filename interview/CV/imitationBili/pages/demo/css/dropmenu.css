@@ -1,0 +1,92 @@
+.demo-container > .demo.demo-drop{
+	
+	align-items: flex-start;
+	font-size: 0.13rem
+}
+.dropMenu{
+	width: 0.8rem;
+	height: 0.2rem;
+	line-height: 0.2rem;
+	box-shadow: 1px 1px 2px #ccc;
+	position: relative;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.dropMenu:hover{
+	width: 0.81rem;
+	height: 0.21rem;
+	line-height: 0.21rem;
+	box-shadow: 1px 1px 2px #ccc;
+	top: 1px;
+}
+.dropMenu.active{
+	width: 0.81rem;
+	height: 0.21rem;
+	line-height: 0.21rem;
+	box-shadow: 1px 1px 2px #ccc;
+	top: 1px;
+}
+.dropMenu ul{
+	width: 0.8rem;	
+	box-shadow: 1px 1px 2px #ccc;
+	position: relative;
+	z-index: 1;
+	background: #fff;
+	height: 0;
+	transition: height 2s;
+	overflow: hidden;
+}
+.dropMenu:hover ul{
+	height: auto;
+	overflow: visible;
+}
+.dropMenu.active ul{
+	height: auto;
+	overflow: visible;
+}
+.dropMenu ul li{
+	width: 0.8rem;
+	height: 0.2rem;
+	line-height: 0.2rem;
+	box-shadow: 1px 1px 1px #ccc;
+	position: relative;
+	z-index: 1;
+	overflow: visible;
+}
+.dropMenu ul li .cow{
+	position: absolute;
+	left: 100%;
+	top: 0%;
+	z-index: 2;
+	height: 0;
+	overflow: hidden;
+}
+.dropMenu ul li:hover .cow{
+	height: auto;
+}
+.dropMenu ul li.active .cow{
+	height: auto;
+}
+.dropMenu:last-child ul li .cow{
+	position: absolute;
+	left: auto;
+	right: 100%;
+	top: 0%;
+	z-index: 2;
+	height: 0;
+	/*animation: show 2s infinite;*/
+}
+/*.dropMenu:last-child ul li:hover .cow{
+	animation: none;
+}*/
+
+@keyframes show{
+	from{
+		height: 0;
+	}
+	to{
+		height: auto;
+
+	}
+}

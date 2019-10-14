@@ -1,0 +1,48 @@
+html,body {
+    height: 100%;
+    background-color: #ddd;
+    font-size: 0.18rem;
+    overflow: scroll;
+}
+
+.container {
+    width: auto;
+    height: 100%;   
+    margin: 0 auto;
+    display: flex;
+    z-index: 100;
+    flex-wrap: wrap;
+    overflow: visible;
+
+}
+.container .boxs{
+    /*background: #666;*/
+}
+
+.container .boxs> div {
+    box-sizing: border-box;
+    width: 0.8rem;
+    margin: 0.1rem;
+    float: left;
+    border-radius: 0.05rem;
+    background-color: #fff;
+}
+
+.container .boxs>div:hover {
+    opacity: 0.9;
+}
+
+.container .boxs>div>img {
+    width: 100%;
+}
+
+.container .boxs>div>a {
+    display: block;
+    text-align: center;
+    line-height: 0.20rem;
+    font-size: 0.10rem
+}
+
+.container .boxs>div>a:hover {
+    color: #666;
+}

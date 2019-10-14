@@ -1,0 +1,4 @@
+@charset "UTF-8";
+.target .home_title > p:last-child{
+	float: none;	
+}

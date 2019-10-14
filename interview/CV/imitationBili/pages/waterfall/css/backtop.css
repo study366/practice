@@ -1,0 +1,40 @@
+@charset "UTF-8";
+.backHome{
+	display: inline-block;
+	width: 1rem;
+	font-size: 0.16rem;
+	color: #fff;
+	height: 0.32rem;
+	line-height: 0.32rem;
+	background: rgba(100,100,100,0.5);
+	text-align: center;
+	position: absolute;
+	top: 0.11rem;
+	left: 0.1rem;
+	cursor:pointer;
+	animation: backHome .61s infinite alternate;
+	z-index: 1;
+	
+}
+@keyframes backHome{
+	to{
+		height:0.34rem;
+		font-size: 0.17rem
+	}
+}
+
+.backTop .iconfont{	
+	opacity: 0;
+	font-size: 0.36rem;
+	color: #ae62dad4;
+	animation: backTop 0.5s infinite alternate;
+	transition: opacity 2s;	
+}
+.backTop.active .iconfont{	
+	opacity: 1;
+}
+@keyframes backTop{
+	to{
+		font-size: 0.40rem
+	}
+}

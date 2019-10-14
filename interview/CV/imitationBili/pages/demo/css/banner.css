@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+.demo-container .demo .banner-container{
+	width: 1rem;
+	height: 1rem;
+	background: #eee;
+	display: flex;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 1px 0px #ddd;
+}
+.demo-container .demo{
+	position: relative;
+}
+.demo-container .demo .banner-container .banner-item{
+	width: 100%;
+	flex-shrink: 0;
+	position: relative;
+	transition: right 2s;
+	left: -100%;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+
+} 
+.demo-container .demo .banner-container .banner-item:last-child{
+	transition: right 2s;
+}
+.demo-container .demo .banner-container .banner-item img{
+	width: 80%;	
+	height: 50%;
+}
+.demo-container .banner-left,
+.demo-container .banner-right{
+	position: absolute;
+	top: 50%;
+	left: 0.5rem;
+	margin-top: -0.1rem;
+	background: #FFF;
+	width: 0.1rem;
+	height: 0.1rem;
+	font-size: 0.1rem;
+	line-height: 0.1rem;
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+}
+.demo-container .banner-left:hover,
+.demo-container .banner-right:hover{
+	margin-top: -0.11rem;
+	background: #eee;
+	width: 0.11rem;
+	height: 0.11rem;
+	font-size: 0.11rem;
+	line-height: 0.11rem;
+
+}
+.demo-container .banner-right{
+	left: auto;
+	right: 0.5rem;
+	
+}

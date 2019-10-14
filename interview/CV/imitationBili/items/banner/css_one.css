@@ -1,0 +1,56 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	width: 1300px;
+	text-align: center;
+}
+.nav{
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 25px;
+	width: 100%;
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+	
+	overflow: hidden;
+}
+.nav div{
+	float: left;
+	margin: 0px;
+	width: 25%;
+	height: 100%;
+	background-color: gray;
+}
+.nav .click{
+	background-color: orange;
+}
+.nav .noclick{
+	background-color: gray;
+}
+.content{
+	margin-left: 10%;
+	margin-right: 10%;
+	width: 100%;
+	height: 500px;
+	text-align: center;
+	background-color: pink;
+	/*z-index: 999;*/
+}
+.content div{
+	position: absolute;
+	top: 105px;
+}
+/*如何让图片随着div变化而变化*/
+.content img{
+	width: 1300px;
+	height: 500px;
+}
+.expose{
+	z-index: 999;
+}
+.hidden{
+	z-index: 1;
+}

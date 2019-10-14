@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+header,section{
+	width: 80%;
+	margin: 0 auto;
+	background: #eee;
+	padding: 0 10px;
+	overflow: hidden;
+	
+}
+.item-container{
+	display: flex;
+}
+.item-container-name{
+	width: 20%;	
+	text-align: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000;
+}
+.item-container-detail{
+	width: 80%;	
+	border-bottom: 1px solid #000;
+}

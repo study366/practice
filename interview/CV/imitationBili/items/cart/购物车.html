@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			border: none;
+		}
+		#wrap{
+			width: 800px;
+			margin: 0 auto;
+			border: 1px solid #aaa;
+		}
+		#wrap header{
+			width: 100%;
+			height: 100px;
+			line-height: 100px;
+			fong-size:18px;
+			color: #000;
+			background-color: #ccc;
+			overflow: hidden;
+		}
+		#wrap header p{
+			overflow: hidden;
+		}
+		#wrap header .left{			
+			margin-left: 10px;			
+		}
+		#wrap header .left.name{
+			margin-left: 50px;
+		}
+		#wrap header p .middle{
+			margin-left: 80px;
+		}
+		#wrap header p .middle:nth-child(4){
+			margin-left: 160px;
+		}
+		#wrap header p .right{
+			margin-left: 100px;
+		}
+		#wrap .box{
+			width: 100%;
+			height: 150px;
+			line-height: 150px;			
+			border-bottom: 1px solid #ccc;
+		}
+		#wrap .box .left{
+			position: relative;
+			left: 16px;	
+		}
+		#wrap .box .left.name{
+			position: relative;
+			top: 30px;			
+			margin-left: 45px;
+		}
+		#wrap .box p .middle{
+			margin-left: 77px;
+		}
+		#wrap .box p .middle:nth-child(3){
+			margin-left: 112px;
+		}
+
+		#wrap .box .amount{
+			width: 50px;
+			margin-left: 50px;
+		}
+		#wrap .box .right{
+			margin-left: 80px;
+		}
+		#wrap .bottom {
+			height: 60px;
+			line-height: 60px;			
+		}
+		#wrap .bottom p{
+			float: right;
+			margin-right: 20px;
+		}
+		#wrap .bottom p:first-child{
+				background-color: #f00;
+				padding:0 20px;
+				margin: 0;
+				color: #fff;
+		}
+		#wrap .bottom p span{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<header>
+			<p>
+				<input type="checkbox" class="left select-all" name="all">
+				<label for="all" class="">全选</label>
+				<span class="left name">商品名称</span>
+				<span class="middle">总价</span>
+				<span class="middle">单价</span>
+				<span class="middle">数量</span>
+				<span class="right">操作</span>			
+			</p>
+		</header>
+		<div class="container">
+			<div class="box">
+				<p class="price">
+					<input type="checkbox" value="ture" name="choose" class="radio left">
+					<img src="./img/g2.jpg" class="left name">			
+					<span class=" middle">￥<span class="total">396</span></span>
+					<span class=" middle">￥<span class="price">396</span></span>
+					<input type="number" class="amount middle">
+					<span class="dele right">删除</span>
+				</p>
+			</div>		
+			<div class="box">
+				<p class="price">
+					<input type="checkbox" value="ture" name="choose" class="radio left">
+					<img src="./img/g2.jpg" class="left name">			
+					<span class=" middle">￥<span class="total">396</span></span>
+					<span class="middle">￥<span class="price">396</span></span>
+					<input type="number" class="amount middle">
+					<span class="dele right">删除</span>
+				</p>
+			</div>
+			<div class="box">
+				<p class="price">
+					<input type="checkbox" value="ture" name="choose" class="radio left">
+					<img src="./img/g2.jpg" class="left name">			
+					<span class=" middle">￥<span class="total">396</span></span>
+					<span class="middle">￥<span class="price">396</span></span>
+					<input type="number" class="amount middle">
+					<span class="dele right">删除</span>
+				</p>
+			</div>		
+			
+
+		</div>
+		<div class="bottom">			
+			<p class="submit">去结算</p>
+			<p>应付金额：<span >￥<span class="pay">1500</span></span></p>
+		</div>
+	</div>	
+	<script>
+		// 必要变量区域
+		var cart = document.querySelector('#wrap'),
+		selectAll = cart.querySelector('.select-all'),
+		radio = cart.querySelectorAll('.radio'),
+		box = cart.querySelectorAll('.box'),		
+		amount = cart.querySelectorAll('.amount'),		
+		brother = amount[0].parentNode.querySelector('.price'),
+		submit = cart.querySelector('.submit'),
+		dele = cart.querySelectorAll('.dele'),
+
+
+		pay = document.querySelector('.pay');
+		;
+		console.log(dele[1].parentNode.parentNode);
+		
+		submit.onclick  = function (argument) {
+			console.log('暂时不能提交，我函数还没写好呢');
+		}
+		totalCount();			
+			
+		// 事件绑定区域
+		selectAll.onclick = selectAllRadio;
+		for(var i = 0 ; i < amount.length; i++){			
+			amount[i].onchange = count;
+			amount[i].onchange();	
+			radio[i].onchange = totalCount;
+			dele[i].onclick=function () {
+				// 找到父节点 子节点
+				var a = this.parentNode.parentNode.parentNode;
+				var b = this.parentNode.parentNode;				
+				a.removeChild(b);
+				radio = cart.querySelectorAll('.radio');
+				totalCount();
+			}
+
+		}
+		
+
+		// 函数区域
+		//总价计算函数 
+		// 遍历每个复选框 如果checked 即被选，则把他的total 算上，计算出总和
+		// 更改总价显示内容
+		function totalCount () {
+			var sum = 0;
+			for (var i = radio.length - 1; i >= 0; i--) {
+				if(radio[i].checked){
+					sum += radio[i].parentNode.querySelector('.total').innerHTML*1;					
+				}	
+			}
+			pay.innerHTML = sum;	
+			return sum;
+		}
+			
+		// 单个物品价格计算函数 
+		// 限制数量不能小于零
+		
+		function count () {			
+			var price = this.parentNode.querySelector('.price').innerHTML,
+				number = this.parentNode.querySelector('.amount').value,
+				total = this.parentNode.querySelector('.total');				
+				Number(number);				
+				if(number<0){
+					console.log('不能小于零');
+					this.parentNode.querySelector('.amount').value = 0;
+				}
+				else if (number%1 != 0) {
+					console.log('必须为整数');
+					this.parentNode.querySelector('.amount').value = Math.ceil(number);
+				}
+				total.innerHTML = Math.ceil(price * number*100)/100;
+				totalCount();				
+		}	
+
+		//全选框控制函数 他被选则全选
+		// 全选框 selectAll 其他框框radio[i]
+		function selectAllRadio () {			
+			if(selectAll.checked){
+				for(var i in radio){
+				radio[i].checked = true; 
+				}
+			}
+			else{
+				for(var i in radio){
+				radio[i].checked = false; 
+				}
+			}
+			totalCount();	
+			
+		}
+
+	</script>
+	<script>
+		var a =  new Function('var1','var2','console.log(var1+ var2)');
+		alert(typeof a);
+		alert(a instanceof Object);
+		a(1,2);
+	</script>
+</body>
+</html>

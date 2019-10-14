@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+
+.backTop .iconfont{	
+	opacity: 0;
+	font-size: 0.36rem;
+	color: #ae62dad4;
+	animation: backTop 0.5s infinite alternate;
+	transition: opacity 2s;	
+}
+.backTop.active .iconfont{	
+	opacity: 1;
+}
+@keyframes backTop{
+	to{
+		font-size: 0.40rem
+	}
+}

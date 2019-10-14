@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>边框与背景</title>
+	<style>
+		html{
+			font-size: 16px;
+		}
+		.container{
+			width: 80%;
+			margin: 0 auto;
+			outline: 1px solid pink;
+			overflow: hidden;
+			background: #F8F0F0;
+
+		}
+		.container > div{
+			width: 20rem;
+			height: 10rem;			
+			outline: 1px solid pink;
+			box-sizing: border-box;
+
+			margin: 0.5rem;
+			float: left;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.container > div:nth-child(2){
+			border: 10px solid rgba(100,100,100,0.5);
+			outline: none;
+			background: #fff;
+			color: red;
+		}
+		.container > div:nth-child(3){
+			border: 2px solid pink;
+			border-radius: 50%;
+			outline: none;
+			box-shadow: 0 0 0 2px #0f0,
+						0 0 0 4px #f00,
+						0 0 0 6px #00f,
+						0 0 0 8px #f00;
+
+		}
+		.container > div:nth-child(4){
+			outline: 10px solid green;
+			
+			border-radius: 10px;
+			box-shadow: 0 0 0 10px blue; 
+		}
+		.container > div:nth-child(5){
+			border: 10px solid rgba(20,20,20,0.5);
+			padding: 20px;
+			background: #ccc url(./bg.png) no-repeat ;
+			background-origin: border-box;
+			/*background-origin: content-box;*/
+			background-position:60px 10px;
+			
+		}
+		.container > div:nth-child(6){
+			background: repeating-linear-gradient(0deg,
+			 #f00 25%, 
+			 #fff 0%,
+			 #fff 50%,
+             #f00 0%, 
+             #f00 75%, 
+             #fff 75%);
+			/*background-position: 0 10px;*/
+			/*animation: bgLinear 10s linear infinite;*/
+		}
+		@keyframes bgLinear{
+			to{
+				background-position: 0 100px;
+			}
+		}
+		.container > div:nth-child(7){
+			background: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div>1. 基本盘</div>
+		<div>2. 半透明边框rgba</div>
+		<div>3. 多重边框box-shadow</div>
+		<div>4.边框内圆角box-shadow、outline、border-radius</div>
+		<div>5. 背景定位background-position|background-origin</div>
+		<div>6. 条纹背景 repeating-linear-gradient(方向，颜色 距离， 颜色 距离)</div>
+		<div>4. 1px边</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,188 @@
+@charset "UTF-8";
+.demo.demo-cart{
+	width: 50%;
+	height: 1rem;
+	background: #eee;
+	display: flex;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 1px 0px #ddd;
+	flex-direction: column;
+	outline: 1px dotted blue;
+	cursor: pointer;
+}
+.demo.demo-cart .form-button{
+	width: 0.8rem;	
+}
+.back{
+	width: 0.5rem;
+	height: 0.3rem;
+	line-height: 0.3rem;
+	font-size: 0.14rem;
+	position: absolute;
+	top: 0.1rem;
+	left: 0.1rem;
+	z-index: 1;
+	color: #fff;
+	text-align: center;
+	border: 1px solid #ccc;
+	border-radius: 5%; 
+}
+.cart-mask{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background: #fff;
+	display: none;
+	padding-top: 0.5rem;
+
+}
+.cart-mask.active{
+	display: block;
+
+}
+.cart-mask header{
+	width: 100%;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	font-size: 0.2rem;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #f2270c;
+	color: #fff;
+	box-shadow: 0 0.01rem 0.03rem 0.02rem #cad;
+}
+.cart-mask.active .item{
+	padding:0.1rem 0.05rem;
+	display: flex;
+	padding-bottom: 20px;
+	box-shadow: 0 1px 1px 1px #ccc;
+	margin: 10px 0;
+}
+.cart-mask.active .select{
+	width: 42px;
+	height: auto;
+	
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	text-align: center;
+	flex-shrink:0; 
+}
+.cart-mask.active .select .choose-box{
+	width: 20px;
+	height: 20px;
+	/*border: 1px solid #ccc;*/
+	border-radius: 50%;
+	display: inline-block;
+	background-image: url(../img/icon.png);
+	background-position: 0px -48px;
+	background-size:116px 110px 
+}
+.cart-mask.active .select .choose-box.seleted{
+	background-position: -80px -40px;
+}
+.cart-mask.active .pic{
+	flex-shrink: 0;
+	width: 100px;
+	height: 100px;
+}
+.cart-mask.active .pic img{
+	width: 100%;
+	height: 100%;
+}
+.cart-mask.active .content{
+	padding: 0 0.05rem;
+	font-size: 0.11rem;
+	word-break: break-all;
+}
+.cart-mask.active .content .price-line .price{
+	padding-top: 0.1rem;
+	color: #f00;
+	font-size: 0.18rem;
+	font-weight: bold;
+}
+.cart-mask.active .content .price-line{
+	overflow: hidden;
+
+}
+.cart-mask.active .content .price-line .price{
+	float: left;
+}
+.cart-mask.active .content .price-line .num{
+	float: right;	
+}
+.cart-mask.active .content .price-line .num span{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	align-content: center;	
+	margin-top: 0.1rem;
+	cursor: pointer;
+}
+.cart-mask.active .content .price-line .num span.num-value{
+	border: none;
+}
+.cart-mask.active .item{
+	position: relative;
+}
+.cart-mask.active .delete{
+	position: absolute;
+	bottom: 0.3rem;
+	right: 0.3rem;
+	color: #aaa;
+	font-size: 0.1rem;
+	cursor: pointer;
+}
+.total {
+	height: 50px;
+	line-height: 50px;
+	box-shadow: 0 2px 2px 2px #ccc;
+	width: 100%;
+	overflow: hidden;
+}
+.select{
+	padding-top: 10px;
+	float: left;	
+	position: relative;
+}
+.select p{
+	position: absolute;
+	top:15px;
+	font-size: 10px;
+}
+.price-block{
+	float: right;
+	font-weight: bold;
+}
+.price-block span{
+	color: #f00;
+
+}
+.price-buy{
+	float: right;
+	margin-left: 10px;
+	display: block;
+	background-color: #f00;
+	color: #fff;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 10px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.price-buy span{
+	font-weight: 200;
+	font-size: 13px;
+}
+.fixed{
+	position: fixed;
+	bottom: 0;
+}
